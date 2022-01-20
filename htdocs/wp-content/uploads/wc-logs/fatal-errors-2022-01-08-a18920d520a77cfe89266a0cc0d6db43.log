@@ -1,0 +1,150 @@
+2022-01-08T12:35:03+00:00 CRITICAL syntax error, unexpected '<', expecting end of file в C:\xampp\htdocs\Zdrav\wp-content\themes\Custom\header.php на строке 2
+
+2022-01-08T12:35:26+00:00 CRITICAL syntax error, unexpected '<', expecting end of file в C:\xampp\htdocs\Zdrav\wp-content\themes\Custom\index.php на строке 3
+
+2022-01-08T12:35:46+00:00 CRITICAL syntax error, unexpected '<', expecting end of file в C:\xampp\htdocs\Zdrav\wp-content\themes\Custom\index.php на строке 3
+
+2022-01-08T12:55:15+00:00 CRITICAL syntax error, unexpected ',' в C:\xampp\htdocs\Zdrav\wp-content\themes\Custom\functions.php на строке 2
+
+2022-01-08T12:55:25+00:00 CRITICAL syntax error, unexpected ',' в C:\xampp\htdocs\Zdrav\wp-content\themes\Custom\functions.php на строке 2
+
+2022-01-08T12:56:18+00:00 CRITICAL syntax error, unexpected ',' в C:\xampp\htdocs\Zdrav\wp-content\themes\Custom\functions.php на строке 2
+
+2022-01-08T12:58:19+00:00 CRITICAL syntax error, unexpected ',' в C:\xampp\htdocs\Zdrav\wp-content\themes\Custom\functions.php на строке 2
+
+2022-01-08T12:58:26+00:00 CRITICAL syntax error, unexpected ',' в C:\xampp\htdocs\Zdrav\wp-content\themes\Custom\functions.php на строке 2
+
+2022-01-08T12:58:30+00:00 CRITICAL syntax error, unexpected ',' в C:\xampp\htdocs\Zdrav\wp-content\themes\Custom\functions.php на строке 2
+
+2022-01-08T12:58:37+00:00 CRITICAL syntax error, unexpected ',' в C:\xampp\htdocs\Zdrav\wp-content\themes\Custom\functions.php на строке 2
+
+2022-01-08T12:58:40+00:00 CRITICAL syntax error, unexpected ',' в C:\xampp\htdocs\Zdrav\wp-content\themes\Custom\functions.php на строке 2
+
+2022-01-08T12:59:00+00:00 CRITICAL Uncaught Error: Call to undefined function get_template_directory_url() in C:\xampp\htdocs\Zdrav\wp-content\themes\Custom\functions.php:5
+Stack trace:
+#0 C:\xampp\htdocs\Zdrav\wp-includes\class-wp-hook.php(303): style_theme('')
+#1 C:\xampp\htdocs\Zdrav\wp-includes\class-wp-hook.php(327): WP_Hook->apply_filters(NULL, Array)
+#2 C:\xampp\htdocs\Zdrav\wp-includes\plugin.php(470): WP_Hook->do_action(Array)
+#3 C:\xampp\htdocs\Zdrav\wp-includes\script-loader.php(2083): do_action('wp_enqueue_scri...')
+#4 C:\xampp\htdocs\Zdrav\wp-includes\class-wp-hook.php(303): wp_enqueue_scripts('')
+#5 C:\xampp\htdocs\Zdrav\wp-includes\class-wp-hook.php(327): WP_Hook->apply_filters(NULL, Array)
+#6 C:\xampp\htdocs\Zdrav\wp-includes\plugin.php(470): WP_Hook->do_action(Array)
+#7 C:\xampp\htdocs\Zdrav\wp-includes\general-template.php(3015): do_action('wp_head')
+#8 C:\xampp\htdocs\Zdrav\wp-content\themes\Custom\header.php(13): wp_head()
+#9 C:\xampp\htdocs\Zdrav\wp-includes\template.php(770): require_once('C:\\xampp\\htdocs...')
+#10 C:\xa в C:\xampp\htdocs\Zdrav\wp-content\themes\Custom\functions.php на строке 5
+
+2022-01-08T12:59:00+00:00 CRITICAL Uncaught Error: Call to undefined function get_template_directory_url() in C:\xampp\htdocs\Zdrav\wp-content\themes\Custom\functions.php:5
+Stack trace:
+#0 C:\xampp\htdocs\Zdrav\wp-includes\class-wp-hook.php(303): style_theme('')
+#1 C:\xampp\htdocs\Zdrav\wp-includes\class-wp-hook.php(327): WP_Hook->apply_filters(NULL, Array)
+#2 C:\xampp\htdocs\Zdrav\wp-includes\plugin.php(470): WP_Hook->do_action(Array)
+#3 C:\xampp\htdocs\Zdrav\wp-includes\script-loader.php(2083): do_action('wp_enqueue_scri...')
+#4 C:\xampp\htdocs\Zdrav\wp-includes\class-wp-hook.php(303): wp_enqueue_scripts('')
+#5 C:\xampp\htdocs\Zdrav\wp-includes\class-wp-hook.php(327): WP_Hook->apply_filters(NULL, Array)
+#6 C:\xampp\htdocs\Zdrav\wp-includes\plugin.php(470): WP_Hook->do_action(Array)
+#7 C:\xampp\htdocs\Zdrav\wp-includes\general-template.php(3015): do_action('wp_head')
+#8 C:\xampp\htdocs\Zdrav\wp-content\themes\Custom\header.php(13): wp_head()
+#9 C:\xampp\htdocs\Zdrav\wp-includes\template.php(770): require_once('C:\\xampp\\htdocs...')
+#10 C:\xa в C:\xampp\htdocs\Zdrav\wp-content\themes\Custom\functions.php на строке 5
+
+2022-01-08T12:59:00+00:00 CRITICAL Uncaught Error: Call to undefined function get_template_directory_url() in C:\xampp\htdocs\Zdrav\wp-content\themes\Custom\functions.php:5
+Stack trace:
+#0 C:\xampp\htdocs\Zdrav\wp-includes\class-wp-hook.php(303): style_theme('')
+#1 C:\xampp\htdocs\Zdrav\wp-includes\class-wp-hook.php(327): WP_Hook->apply_filters(NULL, Array)
+#2 C:\xampp\htdocs\Zdrav\wp-includes\plugin.php(470): WP_Hook->do_action(Array)
+#3 C:\xampp\htdocs\Zdrav\wp-includes\script-loader.php(2083): do_action('wp_enqueue_scri...')
+#4 C:\xampp\htdocs\Zdrav\wp-includes\class-wp-hook.php(303): wp_enqueue_scripts('')
+#5 C:\xampp\htdocs\Zdrav\wp-includes\class-wp-hook.php(327): WP_Hook->apply_filters(NULL, Array)
+#6 C:\xampp\htdocs\Zdrav\wp-includes\plugin.php(470): WP_Hook->do_action(Array)
+#7 C:\xampp\htdocs\Zdrav\wp-includes\general-template.php(3015): do_action('wp_head')
+#8 C:\xampp\htdocs\Zdrav\wp-content\themes\Custom\header.php(13): wp_head()
+#9 C:\xampp\htdocs\Zdrav\wp-includes\template.php(770): require_once('C:\\xampp\\htdocs...')
+#10 C:\xa в C:\xampp\htdocs\Zdrav\wp-content\themes\Custom\functions.php на строке 5
+
+2022-01-08T13:00:52+00:00 CRITICAL Uncaught Error: Call to undefined function get_template_directory_url() in C:\xampp\htdocs\Zdrav\wp-content\themes\Custom\functions.php:5
+Stack trace:
+#0 C:\xampp\htdocs\Zdrav\wp-includes\class-wp-hook.php(303): style_theme('')
+#1 C:\xampp\htdocs\Zdrav\wp-includes\class-wp-hook.php(327): WP_Hook->apply_filters(NULL, Array)
+#2 C:\xampp\htdocs\Zdrav\wp-includes\plugin.php(470): WP_Hook->do_action(Array)
+#3 C:\xampp\htdocs\Zdrav\wp-includes\script-loader.php(2083): do_action('wp_enqueue_scri...')
+#4 C:\xampp\htdocs\Zdrav\wp-includes\class-wp-hook.php(303): wp_enqueue_scripts('')
+#5 C:\xampp\htdocs\Zdrav\wp-includes\class-wp-hook.php(327): WP_Hook->apply_filters(NULL, Array)
+#6 C:\xampp\htdocs\Zdrav\wp-includes\plugin.php(470): WP_Hook->do_action(Array)
+#7 C:\xampp\htdocs\Zdrav\wp-includes\general-template.php(3015): do_action('wp_head')
+#8 C:\xampp\htdocs\Zdrav\wp-content\themes\Custom\header.php(13): wp_head()
+#9 C:\xampp\htdocs\Zdrav\wp-includes\template.php(770): require_once('C:\\xampp\\htdocs...')
+#10 C:\xa в C:\xampp\htdocs\Zdrav\wp-content\themes\Custom\functions.php на строке 5
+
+2022-01-08T13:00:53+00:00 CRITICAL Uncaught Error: Call to undefined function get_template_directory_url() in C:\xampp\htdocs\Zdrav\wp-content\themes\Custom\functions.php:5
+Stack trace:
+#0 C:\xampp\htdocs\Zdrav\wp-includes\class-wp-hook.php(303): style_theme('')
+#1 C:\xampp\htdocs\Zdrav\wp-includes\class-wp-hook.php(327): WP_Hook->apply_filters(NULL, Array)
+#2 C:\xampp\htdocs\Zdrav\wp-includes\plugin.php(470): WP_Hook->do_action(Array)
+#3 C:\xampp\htdocs\Zdrav\wp-includes\script-loader.php(2083): do_action('wp_enqueue_scri...')
+#4 C:\xampp\htdocs\Zdrav\wp-includes\class-wp-hook.php(303): wp_enqueue_scripts('')
+#5 C:\xampp\htdocs\Zdrav\wp-includes\class-wp-hook.php(327): WP_Hook->apply_filters(NULL, Array)
+#6 C:\xampp\htdocs\Zdrav\wp-includes\plugin.php(470): WP_Hook->do_action(Array)
+#7 C:\xampp\htdocs\Zdrav\wp-includes\general-template.php(3015): do_action('wp_head')
+#8 C:\xampp\htdocs\Zdrav\wp-content\themes\Custom\header.php(13): wp_head()
+#9 C:\xampp\htdocs\Zdrav\wp-includes\template.php(770): require_once('C:\\xampp\\htdocs...')
+#10 C:\xa в C:\xampp\htdocs\Zdrav\wp-content\themes\Custom\functions.php на строке 5
+
+2022-01-08T13:00:53+00:00 CRITICAL Uncaught Error: Call to undefined function get_template_directory_url() in C:\xampp\htdocs\Zdrav\wp-content\themes\Custom\functions.php:5
+Stack trace:
+#0 C:\xampp\htdocs\Zdrav\wp-includes\class-wp-hook.php(303): style_theme('')
+#1 C:\xampp\htdocs\Zdrav\wp-includes\class-wp-hook.php(327): WP_Hook->apply_filters(NULL, Array)
+#2 C:\xampp\htdocs\Zdrav\wp-includes\plugin.php(470): WP_Hook->do_action(Array)
+#3 C:\xampp\htdocs\Zdrav\wp-includes\script-loader.php(2083): do_action('wp_enqueue_scri...')
+#4 C:\xampp\htdocs\Zdrav\wp-includes\class-wp-hook.php(303): wp_enqueue_scripts('')
+#5 C:\xampp\htdocs\Zdrav\wp-includes\class-wp-hook.php(327): WP_Hook->apply_filters(NULL, Array)
+#6 C:\xampp\htdocs\Zdrav\wp-includes\plugin.php(470): WP_Hook->do_action(Array)
+#7 C:\xampp\htdocs\Zdrav\wp-includes\general-template.php(3015): do_action('wp_head')
+#8 C:\xampp\htdocs\Zdrav\wp-content\themes\Custom\header.php(13): wp_head()
+#9 C:\xampp\htdocs\Zdrav\wp-includes\template.php(770): require_once('C:\\xampp\\htdocs...')
+#10 C:\xa в C:\xampp\htdocs\Zdrav\wp-content\themes\Custom\functions.php на строке 5
+
+2022-01-08T13:01:07+00:00 CRITICAL Uncaught Error: Call to undefined function get_template_directory_url() in C:\xampp\htdocs\Zdrav\wp-content\themes\Custom\functions.php:5
+Stack trace:
+#0 C:\xampp\htdocs\Zdrav\wp-includes\class-wp-hook.php(303): style_theme('')
+#1 C:\xampp\htdocs\Zdrav\wp-includes\class-wp-hook.php(327): WP_Hook->apply_filters(NULL, Array)
+#2 C:\xampp\htdocs\Zdrav\wp-includes\plugin.php(470): WP_Hook->do_action(Array)
+#3 C:\xampp\htdocs\Zdrav\wp-includes\script-loader.php(2083): do_action('wp_enqueue_scri...')
+#4 C:\xampp\htdocs\Zdrav\wp-includes\class-wp-hook.php(303): wp_enqueue_scripts('')
+#5 C:\xampp\htdocs\Zdrav\wp-includes\class-wp-hook.php(327): WP_Hook->apply_filters(NULL, Array)
+#6 C:\xampp\htdocs\Zdrav\wp-includes\plugin.php(470): WP_Hook->do_action(Array)
+#7 C:\xampp\htdocs\Zdrav\wp-includes\general-template.php(3015): do_action('wp_head')
+#8 C:\xampp\htdocs\Zdrav\wp-content\themes\Custom\header.php(13): wp_head()
+#9 C:\xampp\htdocs\Zdrav\wp-includes\template.php(770): require_once('C:\\xampp\\htdocs...')
+#10 C:\xa в C:\xampp\htdocs\Zdrav\wp-content\themes\Custom\functions.php на строке 5
+
+2022-01-08T13:01:08+00:00 CRITICAL Uncaught Error: Call to undefined function get_template_directory_url() in C:\xampp\htdocs\Zdrav\wp-content\themes\Custom\functions.php:5
+Stack trace:
+#0 C:\xampp\htdocs\Zdrav\wp-includes\class-wp-hook.php(303): style_theme('')
+#1 C:\xampp\htdocs\Zdrav\wp-includes\class-wp-hook.php(327): WP_Hook->apply_filters(NULL, Array)
+#2 C:\xampp\htdocs\Zdrav\wp-includes\plugin.php(470): WP_Hook->do_action(Array)
+#3 C:\xampp\htdocs\Zdrav\wp-includes\script-loader.php(2083): do_action('wp_enqueue_scri...')
+#4 C:\xampp\htdocs\Zdrav\wp-includes\class-wp-hook.php(303): wp_enqueue_scripts('')
+#5 C:\xampp\htdocs\Zdrav\wp-includes\class-wp-hook.php(327): WP_Hook->apply_filters(NULL, Array)
+#6 C:\xampp\htdocs\Zdrav\wp-includes\plugin.php(470): WP_Hook->do_action(Array)
+#7 C:\xampp\htdocs\Zdrav\wp-includes\general-template.php(3015): do_action('wp_head')
+#8 C:\xampp\htdocs\Zdrav\wp-content\themes\Custom\header.php(13): wp_head()
+#9 C:\xampp\htdocs\Zdrav\wp-includes\template.php(770): require_once('C:\\xampp\\htdocs...')
+#10 C:\xa в C:\xampp\htdocs\Zdrav\wp-content\themes\Custom\functions.php на строке 5
+
+2022-01-08T13:01:08+00:00 CRITICAL Uncaught Error: Call to undefined function get_template_directory_url() in C:\xampp\htdocs\Zdrav\wp-content\themes\Custom\functions.php:5
+Stack trace:
+#0 C:\xampp\htdocs\Zdrav\wp-includes\class-wp-hook.php(303): style_theme('')
+#1 C:\xampp\htdocs\Zdrav\wp-includes\class-wp-hook.php(327): WP_Hook->apply_filters(NULL, Array)
+#2 C:\xampp\htdocs\Zdrav\wp-includes\plugin.php(470): WP_Hook->do_action(Array)
+#3 C:\xampp\htdocs\Zdrav\wp-includes\script-loader.php(2083): do_action('wp_enqueue_scri...')
+#4 C:\xampp\htdocs\Zdrav\wp-includes\class-wp-hook.php(303): wp_enqueue_scripts('')
+#5 C:\xampp\htdocs\Zdrav\wp-includes\class-wp-hook.php(327): WP_Hook->apply_filters(NULL, Array)
+#6 C:\xampp\htdocs\Zdrav\wp-includes\plugin.php(470): WP_Hook->do_action(Array)
+#7 C:\xampp\htdocs\Zdrav\wp-includes\general-template.php(3015): do_action('wp_head')
+#8 C:\xampp\htdocs\Zdrav\wp-content\themes\Custom\header.php(13): wp_head()
+#9 C:\xampp\htdocs\Zdrav\wp-includes\template.php(770): require_once('C:\\xampp\\htdocs...')
+#10 C:\xa в C:\xampp\htdocs\Zdrav\wp-content\themes\Custom\functions.php на строке 5
+
+2022-01-08T13:22:56+00:00 CRITICAL syntax error, unexpected 'ж' (T_STRING) в C:\xampp\htdocs\Zdrav\wp-content\themes\Custom\functions.php на строке 19
+
