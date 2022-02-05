@@ -2,3 +2,20 @@
  * Theme Name:  Custom
  * Version:     1.0
  */
+.hands {
+  z-index: -1;
+}
+.row {
+  display: flex;
+}
+.col-lg-6 {
+  max-width: 50%;
+  min-width: 50%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+#single-product-page .product-thumb-carousel img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}

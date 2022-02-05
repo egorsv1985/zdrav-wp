@@ -1,0 +1,54 @@
+.header {
+
+	// .header__wrap
+	&__wrap {}
+
+	// .header__logo-text
+	&__logo-text {}
+
+	// .header__menu
+	&__menu {}
+
+	// .header__toolbar
+	&__toolbar {}
+
+	// .header__burger
+	&__burger {}
+}
+
+.container {}
+
+.menu {
+
+	// .menu__list
+	&__list {}
+
+	// .menu__item
+	&__item {}
+}
+
+.menu-link {}
+
+.toolbar {
+
+	// .toolbar__cart
+	&__cart {}
+
+	// .toolbar__counter
+	&__counter {}
+}
+
+.burger {
+
+	// .burger__nav
+	&__nav {}
+
+	// .burger__menu
+	&__menu {}
+
+	// .burger__item
+	&__item {}
+
+	// .burger__link
+	&__link {}
+}

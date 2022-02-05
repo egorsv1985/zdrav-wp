@@ -1,0 +1,29 @@
+/*
+
+Theme Name: storefront-child
+
+description: >-
+
+storefront Child Theme
+
+Author: Sabantsau Egor
+
+Template: storefront
+
+Version: 1.0.0
+
+*/
+
+.single_add_to_cart_button::before {
+	margin-right: 10px;
+}
+
+body {
+	color: red;
+}
+
+li {
+
+	font-family: 'Lora', serif;
+
+}

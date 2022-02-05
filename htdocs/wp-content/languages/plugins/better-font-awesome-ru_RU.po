@@ -1,0 +1,49 @@
+# Translation of Plugins - Better Font Awesome - Stable (latest release) in Russian
+# This file is distributed under the same license as the Plugins - Better Font Awesome - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2016-04-28 02:55:03+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n % 10 == 1 && n % 100 != 11) ? 0 : ((n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14)) ? 1 : 2);\n"
+"X-Generator: GlotPress/3.0.0-alpha.2\n"
+"Language: ru\n"
+"Project-Id-Version: Plugins - Better Font Awesome - Stable (latest release)\n"
+
+#. Description of the plugin
+msgid "The ultimate Font Awesome icon plugin for WordPress."
+msgstr "Плагин иконок Font Awesome для WordPress."
+
+#. Plugin URI of the plugin
+msgid "http://wordpress.org/plugins/better-font-awesome"
+msgstr "http://wordpress.org/plugins/better-font-awesome"
+
+#: better-font-awesome.php:443
+msgid "Hide the default admin warnings that are shown when API and CDN errors occur."
+msgstr "Скрыть предупреждения для администратора, которые отображаются при возникновении ошибок API и CDN."
+
+#: better-font-awesome.php:437
+msgid "Hide admin notices"
+msgstr "Скрыть уведомления администратора"
+
+#: better-font-awesome.php:431
+msgid "Attempt to remove Font Awesome CSS and shortcodes added by other plugins and themes."
+msgstr "Попытаться удалить Font Awesome CSS и шорткоды, добавленные другими плагинами и темами."
+
+#: better-font-awesome.php:425
+msgid "Remove existing Font Awesome"
+msgstr "Удалить существующий Font Awesome"
+
+#: better-font-awesome.php:368
+msgid "Save Settings"
+msgstr "Сохранить настройки"
+
+#: better-font-awesome.php:254
+msgid "Back to the plugins page &rarr;"
+msgstr "Назад на страницу плагинов &rarr;"
+
+#. Plugin Name of the plugin
+#: better-font-awesome.php:195 better-font-awesome.php:252
+msgid "Better Font Awesome"
+msgstr "Better Font Awesome"

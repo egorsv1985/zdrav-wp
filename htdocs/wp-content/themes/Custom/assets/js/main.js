@@ -3,40 +3,53 @@
 $(document).ready(function () {
   $('.feedback__slider').slick({
     centerMode: true,
-    centerPadding: '400px',
+    centerPadding: '400px',// меняй это значение 
     slidesToShow: 1,
     dots: true,
     prevArrow: $('.left-arrow'),
     nextArrow: $('.right-arrow'),
     responsive: [{
-        breakpoint: 1350,
-        settings: {
-          arrows: true,
-          centerMode: true,
-          centerPadding: '250px',
-          slidesToShow: 1
-        }
-      },
-      {
-        breakpoint: 1000,
-        settings: {
-          arrows: true,
-          centerMode: true,
-          centerPadding: '150px',
-          slidesToShow: 1
-        }
-      },
-      {
-        breakpoint: 450,
-        settings: {
-          arrows: true,
-          centerMode: true,
-          centerPadding: '0px',
-          slidesToShow: 1
-        }
+      breakpoint: 1350,
+      settings: {
+        arrows: true,
+        centerMode: true,
+        centerPadding: '250px', // меняй это значение 
+        slidesToShow: 1
       }
+    },
+    {
+      breakpoint: 1000,
+      settings: {
+        arrows: true,
+        centerMode: true,
+        centerPadding: '150px', // меняй это значение 
+        slidesToShow: 1
+      }
+    },
+    {
+      breakpoint: 850,
+      settings: {
+        centerPadding: '75px', // меняй это значение -добавил breakpoint
+      }
+    },
+    {
+      breakpoint: 650,
+      settings: {
+        centerPadding: '35px', // меняй это значение -добавил breakpoint
+      }
+    },
+    {
+      breakpoint: 450,
+      settings: {
+        arrows: true,
+        centerMode: true,
+        centerPadding: '0px', // меняй это значение 
+        slidesToShow: 1
+      }
+    }
     ]
   });
+
 
   $('.offer__list').slick({
     centerMode: true,
@@ -45,33 +58,37 @@ $(document).ready(function () {
     prevArrow: $('.left-arrow'),
     nextArrow: $('.right-arrow'),
     responsive: [{
-        breakpoint: 700,
-        settings: {
-          arrows: true,
-          centerMode: true,
-          centerPadding: '0px',
-          slidesToShow: 1
-        }
-      },
-      {
-        breakpoint: 1000,
-        settings: {
-          arrows: true,
-          centerMode: true,
-          centerPadding: '0px',
-          slidesToShow: 3
-        }
-      },
-      {
-        breakpoint: 1300,
-        settings: {
-          arrows: true,
-          centerMode: true,
-          centerPadding: '0px',
-          slidesToShow: 4
-        }
+      breakpoint: 700,
+      settings: {
+        arrows: true,
+        centerMode: true,
+        centerPadding: '0px',
+        slidesToShow: 1
       }
+    },
+    {
+      breakpoint: 1000,
+      settings: {
+        arrows: true,
+        centerMode: true,
+        centerPadding: '0px',
+        slidesToShow: 3
+      }
+    },
+    {
+      breakpoint: 1300,
+      settings: {
+        arrows: true,
+        centerMode: true,
+        centerPadding: '0px',
+        slidesToShow: 4
+      }
+    }
     ]
+  });
+
+  $('.product-thumb-carousel').slick({,
+    slidesToShow: 1,
   });
 
 

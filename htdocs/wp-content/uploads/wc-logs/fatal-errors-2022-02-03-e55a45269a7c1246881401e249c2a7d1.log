@@ -1,0 +1,2 @@
+2022-02-03T10:03:52+00:00 CRITICAL syntax error, unexpected '/', expecting elseif (T_ELSEIF) or else (T_ELSE) or endif (T_ENDIF) в /home/srv92766/htdocs/wp-content/themes/storefront-child/woocommerce/single-product/add-to-cart/simple.php на строке 46
+

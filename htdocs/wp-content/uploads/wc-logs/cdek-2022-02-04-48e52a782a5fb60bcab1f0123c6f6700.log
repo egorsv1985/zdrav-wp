@@ -1,0 +1,424 @@
+2022-02-04T17:42:09+00:00 INFO Создание запроса POST: v2/calculator/tarifflist со следующим содержимым: {
+    "from_location": {
+        "code": 44
+    },
+    "to_location": {
+        "code": 42618
+    },
+    "packages": [
+        {
+            "weight": 100,
+            "length": 100,
+            "width": 100,
+            "height": 100
+        },
+        {
+            "weight": 100,
+            "length": 100,
+            "width": 100,
+            "height": 100
+        },
+        {
+            "weight": 100,
+            "length": 100,
+            "width": 100,
+            "height": 100
+        },
+        {
+            "weight": 100,
+            "length": 100,
+            "width": 100,
+            "height": 100
+        },
+        {
+            "weight": 100,
+            "length": 100,
+            "width": 100,
+            "height": 100
+        },
+        {
+            "weight": 100,
+            "length": 100,
+            "width": 100,
+            "height": 100
+        },
+        {
+            "weight": 100,
+            "length": 100,
+            "width": 100,
+            "height": 100
+        },
+        {
+            "weight": 100,
+            "length": 100,
+            "width": 100,
+            "height": 100
+        },
+        {
+            "weight": 100,
+            "length": 100,
+            "width": 100,
+            "height": 100
+        },
+        {
+            "weight": 100,
+            "length": 100,
+            "width": 100,
+            "height": 100
+        },
+        {
+            "weight": 100,
+            "length": 100,
+            "width": 100,
+            "height": 100
+        },
+        {
+            "weight": 100,
+            "length": 100,
+            "width": 100,
+            "height": 100
+        },
+        {
+            "weight": 100,
+            "length": 100,
+            "width": 100,
+            "height": 100
+        },
+        {
+            "weight": 100,
+            "length": 100,
+            "width": 100,
+            "height": 100
+        },
+        {
+            "weight": 100,
+            "length": 100,
+            "width": 100,
+            "height": 100
+        },
+        {
+            "weight": 100,
+            "length": 100,
+            "width": 100,
+            "height": 100
+        },
+        {
+            "weight": 100,
+            "length": 100,
+            "width": 100,
+            "height": 100
+        },
+        {
+            "weight": 100,
+            "length": 100,
+            "width": 100,
+            "height": 100
+        },
+        {
+            "weight": 100,
+            "length": 100,
+            "width": 100,
+            "height": 100
+        },
+        {
+            "weight": 100,
+            "length": 100,
+            "width": 100,
+            "height": 100
+        },
+        {
+            "weight": 100,
+            "length": 100,
+            "width": 100,
+            "height": 100
+        },
+        {
+            "weight": 100,
+            "length": 100,
+            "width": 100,
+            "height": 100
+        },
+        {
+            "weight": 100,
+            "length": 100,
+            "width": 100,
+            "height": 100
+        },
+        {
+            "weight": 100,
+            "length": 100,
+            "width": 100,
+            "height": 100
+        },
+        {
+            "weight": 100,
+            "length": 100,
+            "width": 100,
+            "height": 100
+        },
+        {
+            "weight": 100,
+            "length": 100,
+            "width": 100,
+            "height": 100
+        },
+        {
+            "weight": 100,
+            "length": 100,
+            "width": 100,
+            "height": 100
+        },
+        {
+            "weight": 100,
+            "length": 100,
+            "width": 100,
+            "height": 100
+        },
+        {
+            "weight": 100,
+            "length": 100,
+            "width": 100,
+            "height": 100
+        },
+        {
+            "weight": 100,
+            "length": 100,
+            "width": 100,
+            "height": 100
+        },
+        {
+            "weight": 100,
+            "length": 100,
+            "width": 100,
+            "height": 100
+        },
+        {
+            "weight": 100,
+            "length": 100,
+            "width": 100,
+            "height": 100
+        },
+        {
+            "weight": 100,
+            "length": 100,
+            "width": 100,
+            "height": 100
+        },
+        {
+            "weight": 100,
+            "length": 100,
+            "width": 100,
+            "height": 100
+        },
+        {
+            "weight": 100,
+            "length": 100,
+            "width": 100,
+            "height": 100
+        },
+        {
+            "weight": 100,
+            "length": 100,
+            "width": 100,
+            "height": 100
+        },
+        {
+            "weight": 100,
+            "length": 100,
+            "width": 100,
+            "height": 100
+        },
+        {
+            "weight": 100,
+            "length": 100,
+            "width": 100,
+            "height": 100
+        },
+        {
+            "weight": 100,
+            "length": 100,
+            "width": 100,
+            "height": 100
+        },
+        {
+            "weight": 100,
+            "length": 100,
+            "width": 100,
+            "height": 100
+        },
+        {
+            "weight": 100,
+            "length": 100,
+            "width": 100,
+            "height": 100
+        },
+        {
+            "weight": 100,
+            "length": 100,
+            "width": 100,
+            "height": 100
+        },
+        {
+            "weight": 100,
+            "length": 100,
+            "width": 100,
+            "height": 100
+        },
+        {
+            "weight": 100,
+            "length": 100,
+            "width": 100,
+            "height": 100
+        },
+        {
+            "weight": 100,
+            "length": 100,
+            "width": 100,
+            "height": 100
+        },
+        {
+            "weight": 100,
+            "length": 100,
+            "width": 100,
+            "height": 100
+        }
+    ]
+}
+2022-02-04T17:42:09+00:00 INFO Ответ API: v2/calculator/tarifflist {
+    "tariff_codes": [
+        {
+            "tariff_code": 139,
+            "tariff_name": "Посылка дверь-дверь",
+            "delivery_mode": 1,
+            "delivery_sum": 552590,
+            "period_min": 1,
+            "period_max": 2,
+            "calendar_min": 1,
+            "calendar_max": 2
+        },
+        {
+            "tariff_code": 137,
+            "tariff_name": "Посылка склад-дверь",
+            "delivery_mode": 3,
+            "delivery_sum": 506455,
+            "period_min": 2,
+            "period_max": 2,
+            "calendar_min": 2,
+            "calendar_max": 2
+        },
+        {
+            "tariff_code": 480,
+            "tariff_name": "Экспресс дверь-дверь",
+            "tariff_description": "Экспресс-доставка",
+            "delivery_mode": 1,
+            "delivery_sum": 920670,
+            "period_min": 1,
+            "period_max": 2,
+            "calendar_min": 1,
+            "calendar_max": 2
+        },
+        {
+            "tariff_code": 482,
+            "tariff_name": "Экспресс склад-дверь",
+            "tariff_description": "Экспресс-доставка",
+            "delivery_mode": 3,
+            "delivery_sum": 920590,
+            "period_min": 2,
+            "period_max": 2,
+            "calendar_min": 2,
+            "calendar_max": 2
+        }
+    ]
+}
+2022-02-04T17:42:09+00:00 ERROR Для текущего направления доступны следующие тарифы - RU - москва - 42618{
+    "tariff_codes": [
+        {
+            "tariff_code": 139,
+            "tariff_name": "Посылка дверь-дверь",
+            "delivery_mode": 1,
+            "delivery_sum": 552590,
+            "period_min": 1,
+            "period_max": 2,
+            "calendar_min": 1,
+            "calendar_max": 2
+        },
+        {
+            "tariff_code": 137,
+            "tariff_name": "Посылка склад-дверь",
+            "delivery_mode": 3,
+            "delivery_sum": 506455,
+            "period_min": 2,
+            "period_max": 2,
+            "calendar_min": 2,
+            "calendar_max": 2
+        },
+        {
+            "tariff_code": 480,
+            "tariff_name": "Экспресс дверь-дверь",
+            "tariff_description": "Экспресс-доставка",
+            "delivery_mode": 1,
+            "delivery_sum": 920670,
+            "period_min": 1,
+            "period_max": 2,
+            "calendar_min": 1,
+            "calendar_max": 2
+        },
+        {
+            "tariff_code": 482,
+            "tariff_name": "Экспресс склад-дверь",
+            "tariff_description": "Экспресс-доставка",
+            "delivery_mode": 3,
+            "delivery_sum": 920590,
+            "period_min": 2,
+            "period_max": 2,
+            "calendar_min": 2,
+            "calendar_max": 2
+        }
+    ]
+}
+2022-02-04T17:42:54+00:00 ERROR Для текущего направления доступны следующие тарифы - RU - москва - 42618{
+    "tariff_codes": [
+        {
+            "tariff_code": 139,
+            "tariff_name": "Посылка дверь-дверь",
+            "delivery_mode": 1,
+            "delivery_sum": 552590,
+            "period_min": 1,
+            "period_max": 2,
+            "calendar_min": 1,
+            "calendar_max": 2
+        },
+        {
+            "tariff_code": 137,
+            "tariff_name": "Посылка склад-дверь",
+            "delivery_mode": 3,
+            "delivery_sum": 506455,
+            "period_min": 2,
+            "period_max": 2,
+            "calendar_min": 2,
+            "calendar_max": 2
+        },
+        {
+            "tariff_code": 480,
+            "tariff_name": "Экспресс дверь-дверь",
+            "tariff_description": "Экспресс-доставка",
+            "delivery_mode": 1,
+            "delivery_sum": 920670,
+            "period_min": 1,
+            "period_max": 2,
+            "calendar_min": 1,
+            "calendar_max": 2
+        },
+        {
+            "tariff_code": 482,
+            "tariff_name": "Экспресс склад-дверь",
+            "tariff_description": "Экспресс-доставка",
+            "delivery_mode": 3,
+            "delivery_sum": 920590,
+            "period_min": 2,
+            "period_max": 2,
+            "calendar_min": 2,
+            "calendar_max": 2
+        }
+    ]
+}

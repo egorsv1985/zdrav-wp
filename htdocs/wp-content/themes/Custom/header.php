@@ -11,36 +11,33 @@
 </head>
 
 <body>
-  <div class="first-screen-overlay">
-    <div class="hands"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/hands.png" alt="" class="hands__image"></div>       
+  <header class="header">
     <div class="container">
-      <header class="header">
-        <div class="header__logo">
-          <?php echo get_custom_logo(); ?>
-          <span class="logo-text">СИМВОЛО-АДАПТЕРЫ: серия ЗДРАВ</span>
-        </div>
-        
-        <div class="header__menu">
+      <div class="header__logo"><?php echo get_custom_logo(); ?>
+        <span class="logo-text">СИМВОЛО-АДАПТЕРЫ: серия ЗДРАВ</span>
+      </div>
+
+      <ul class="header__menu">
         <?php wp_nav_menu(array(
-            'theme_location' => 'top',
-            'container'       => null,
-            'items_wrap' => '%3$s'
+          'theme_location' => 'top',
+          'container'       => null,
+          'items_wrap' => '%3$s'
         )); ?>
-          
+
+      </ul>
+      <div class="right-toolbar">
+        <div class="header__cart">
+          <div class="counter">1</div>
+          <a href="<?php the_permalink(282); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/cart.svg" alt=""></a>
         </div>
-        <div class="right-toolbar">
-          <div class="header__cart">
-            <div class="counter">1</div>
-            <a href="<?php the_permalink(282);?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/cart.svg" alt=""></a>
-          </div>
-          <div class="header__burger"><span class="header__stick"></span></div>
-          <nav class="burger__nav">
-            <ul class="burger__menu">
-              <li><a href="#" class="burger__item">Все устройства</a></li>
-              <li><a href="#" class="burger__item">Доставка и оплата</a></li>
-              <li><a href="#" class="burger__item">Контакты</a></li>
-              <li><a href="#" class="burger__item">Интересное</a></li>
-            </ul>
-          </nav>
-        </div>
-      </header>
+        <div class="header__burger"><span class="header__stick"></span></div>
+        <nav class="burger__nav">
+          <ul class="burger__menu">
+            <li><a href="#" class="burger__item">Все устройства</a></li>
+            <li><a href="#" class="burger__item">Доставка и оплата</a></li>
+            <li><a href="#" class="burger__item">Контакты</a></li>
+            <li><a href="#" class="burger__item">Интересное</a></li>
+          </ul>
+        </nav>
+      </div>
+  </header>
