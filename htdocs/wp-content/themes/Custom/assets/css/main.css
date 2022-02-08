@@ -81,11 +81,12 @@ body {
 
 }
 
-.second-screen-overlay {
-  background: -webkit-gradient(linear, left top, left bottom, from(#B6FBFF), color-stop(18.25%, #96C4E4), to(#83A4D4));
-  background: -o-linear-gradient(top, #B6FBFF 0%, #96C4E4 18.25%, #83A4D4 100%);
-  background: linear-gradient(180deg, #B6FBFF 0%, #96C4E4 18.25%, #83A4D4 100%);
+.customize-support {
+
+  background: linear-gradient(54.73deg, #6363BB -4.33%, #3E69B7 47.39%, #5AA8AD 90.71%);
+
 }
+
 
 input::-webkit-input-placeholder {
   color: #FFF;
@@ -135,33 +136,328 @@ input:focus-visible {
 }
 
 
-.first-screen-overlay {
-  background: -o-linear-gradient(35.27deg, #6363BB -4.33%, #3E69B7 47.39%, #5AA8AD 90.71%);
-  background: linear-gradient(54.73deg, #6363BB -4.33%, #3E69B7 47.39%, #5AA8AD 90.71%);
-  opacity: 0.8;
+
+.row {
+  display: flex;
 }
 
-.second-screen-overlay {
-  background: -webkit-gradient(linear, left top, left bottom, from(#B6FBFF), color-stop(18.25%, #96C4E4), to(#83A4D4));
-  background: -o-linear-gradient(top, #B6FBFF 0%, #96C4E4 18.25%, #83A4D4 100%);
-  background: linear-gradient(180deg, #B6FBFF 0%, #96C4E4 18.25%, #83A4D4 100%);
+.col-lg-6 {
+  max-width: 50%;
+  min-width: 50%;
+
+}
+
+.col-lg-2 {
+  width: 20%;
+}
+
+.col-lg-10 {
+  width: 80%;
+}
+
+#shop-page-wrapper {
+  padding-top: 100px;
+}
+
+#shop-page-wrapper .col-lg-10 .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#shop-page-wrapper .col-lg-10 .row .how-it-work__item {
+  width: 33%;
+  margin-bottom: 30px;
+}
+
+#single-product-page .product-thumb-carousel img {
+  display: block;
+  width: 360px;
+  height: 464px;
+  border-radius: 5px;
+
+}
+
+.product__wrap {
+  margin-right: 40px;
+}
+
+.slick-track {
+  margin-bottom: 20px;
+}
+
+.burger__menu {
+  display: flex;
+  align-items: center;
+}
+
+.header__burger:hover {
+  cursor: pointer;
+}
+
+.menu-right {
+  position: fixed;
+  width: 70%;
+  height: 100%;
+  right: 0;
+  top: 0;
+  z-index: 500;
+  background: linear-gradient(180deg, #7cc4c8 -150.55%, #83a4d4 100%);
+  transition: all 0.4s;
+  transform: translateX(120%);
+}
+
+.menu-right.open {
+  transform: translateX(0%);
+}
+
+.menu-right .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 50px;
+  padding-top: 40px;
+  height: 100%;
+}
+
+.menu-right .close-btn {
+  position: absolute;
+  top: 5px;
+  left: -35px;
+}
+
+.menu-right .close-btn:hover {
+  cursor: pointer;
+}
+
+.menu-right .burger__menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu-right .burger__menu li {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 20px 0;
+  padding-left: 26px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.menu-right .burger__menu li a {
+  font-family: "Gilroy Regular";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 150%;
+  /* or 24px */
+  color: #FFFFFF;
+}
+
+.menu-right .bottom-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 180px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.menu-right .bottom-links a img {
+  display: block;
+  max-width: 20px;
+  height: auto;
+}
+
+.woocommerce-breadcrumb {
+  font-family: "Gilroy Regular";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 150%;
+  /* or 24px */
+  color: #A0FEB5;
+  margin-bottom: 52px;
+}
+
+.woocommerce .woocommerce-breadcrumb {
+  font-family: "Gilroy Regular";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 150%;
+  color: #A0FEB5;
+  margin: 60px 0 47px;
+}
+
+.woocommerce .woocommerce-breadcrumb a {
+  color: #fff
+}
+
+.cart__title {
+  font-family: "Gilroy Bold";
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 150%;
+
+  color: #FFFFFF;
+
+  margin-bottom: 20px;
+
 }
 
 
+.woocommerce table.shop_table {
+  font-family: "Gilroy Bold";
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 150%;
+
+  color: #FFFFFF;
+
+}
+
+.woocommerce table.shop_table {
+  border: none;
+
+}
+
+.woocommerce table.shop_table td {
+  border: none;
+}
+
+.woocommerce #content table.cart img,
+.woocommerce table.cart img,
+.woocommerce-page #content table.cart img,
+.woocommerce-page table.cart img {
+  width: 75px;
+  height: 69px;
+
+  border-radius: 5px;
+
+}
+
+.woocommerce-cart-form__contents th:first-child {
+  min-width: 434px;
+}
+
+.woocommerce .price {
+  font-family: "Gilroy Regular";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+
+  color: #FFFFFF;
+
+}
+
+.cart-product-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.qib-button-wrapper button.qib-button,
+.qib-button-wrapper div.quantity.wqpmb_quantity {
+  height: 30px;
+}
+
+.qib-button-wrapper button.qib-button {
+  padding: 6px 12px 8px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+
+  width: 41px;
+
+  height: 30px;
+  font-family: "Gilroy Regular";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+
+  color: #FFFFFF;
+
+}
+
+.qib-button-wrapper {
+
+  border: 1px solid #44C360;
+  border-radius: 5px;
+
+}
+
+.qib-button-wrapper .quantity input.input-text.qty.text {
+  height: 30px;
+  padding: 6px 12px 8px;
+  text-align: center;
+  background: transparent;
+  border: none;
+  font-family: "Gilroy Regular";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+
+  box-shadow: none;
+
+  color: #000000;
+
+
+}
+
+.woocommerce .quantity .qty {
+  width: 100px;
+}
+
+.cal-title {
+  font-family: "Gilroy Bold";
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 150%;
+
+  color: #FFFFFF;
+
+}
+
+.woocommerce table.shop_table tbody th,
+.woocommerce table.shop_table tfoot td,
+.woocommerce table.shop_table tfoot th {
+  border: none;
+}
+
+.wc-proceed-to-checkout {
+  width: 100%;
+  max-width: 301px;
+  height: 49px;
+  background: #44C460;
+  box-shadow: 0px 0px 30px rgba(94, 117, 71, 0.5);
+  border-radius: 50px;
+
+  font-family: "Gilroy Bold";
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 150%;
+  color: #FFFFFF;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .hands {
 
   position: absolute;
-  width: 115px;
+  width: 139px;
   height: 150px;
+  z-index: 1;
 }
 
 .hands::after {
   display: block;
   content: "";
   position: absolute;
-  top: -10px;
-  left: -10px;
+  top: -47px;
+  left: 0;
   height: 218px;
   width: 153px;
   z-index: -2;
@@ -176,7 +472,7 @@ input:focus-visible {
 
 .hands__image {
   position: absolute;
-  top: 68px;
+  top: 22px;
   left: -17px;
 
   -webkit-filter: drop-shadow(0px 0px 50px rgba(54, 69, 120, 0.3));
@@ -192,15 +488,21 @@ input:focus-visible {
 }
 
 .header {
-  display: -webkit-box;
-  display: -ms-flexbox;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  max-height: 65px;
+  background: linear-gradient(180deg, #B6FBFF -150.55%, #83A4D4 100%);
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  z-index: 100;
+
+}
+
+.header__wrapper {
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
@@ -318,17 +620,37 @@ input:focus-visible {
 
 .hero {
   color: #FFFFFF;
-  margin-top: 78px;
+
   position: relative;
+
+
+  background: linear-gradient(71.86deg, #6363BB -34.17%, #3E69B7 32.35%, #5AA8AD 88.05%);
+
 }
 
-.hero__ring {
+
+
+.hero::after {
+  display: block;
+  content: '';
   position: absolute;
   z-index: -1;
   max-width: 100px;
   height: 200px;
   top: 240px;
   right: -10px;
+
+  background-image: url(../img/ring-hero.png);
+}
+
+.hero__grid {
+  display: grid;
+  grid-template-columns: 10px 1fr;
+  grid-template-rows: 90px 1fr;
+}
+
+.hero__up-box {
+  grid-area: 1 / 1 / 2 / 3;
 }
 
 .hero__line {
@@ -343,6 +665,7 @@ input:focus-visible {
   margin-left: 100px;
   line-height: 1;
   font-weight: 600;
+  color: #fff;
 }
 
 .hero__subtitle {
@@ -355,7 +678,73 @@ input:focus-visible {
   font-weight: 400;
 }
 
+.price {
+  font-family: "Gilroy Bold";
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 150%;
 
+  color: #E01C86;
+
+  margin-bottom: 20px;
+}
+
+.stock {
+  font-family: "Gilroy Regular";
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+
+  margin-bottom: 15px;
+}
+
+.single_add_to_cart_button {
+  /* Rectangle 40 */
+
+  max-width: 239px;
+  width: 100%;
+  height: 68px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: #44C460;
+  box-shadow: 0px 0px 30px rgba(94, 117, 71, 0.5);
+  border-radius: 50px;
+
+  font-family: "Gilroy Bold";
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 150%;
+  /* identical to box height, or 27px */
+
+  color: #FFFFFF;
+  border: none;
+
+  margin: 20px 0;
+}
+
+.product__description,
+.product__desc {
+  font-family: "Gilroy Regular";
+
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+
+  color: #FFFFFF;
+
+}
+
+.product__subtitle {
+  font-family: "Gilroy Bold";
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 130%;
+
+  color: #FFFFFF;
+
+}
 
 .hero__list {
   line-height: 1.5;
@@ -443,9 +832,30 @@ input:focus-visible {
   padding: 90px 0 80px;
   color: #FFFFFF;
   position: relative;
+  background: linear-gradient(69.21deg, #6363BB -5.36%, #3E69B7 58.65%, #5AA8AD 112.25%);
+}
+
+.about__page-foods {
+  background: none;
+
+
+}
+
+
+
+
+.about__wrap {
   display: flex;
   flex-direction: column;
+}
 
+.about__page-foods .about__wrap {
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.about__upper-text .about__wrap {
+  flex-direction: row;
 }
 
 .about__upper-text {
@@ -479,6 +889,15 @@ input:focus-visible {
   line-height: 1.5;
 }
 
+.about__text {
+  display: block;
+  font-family: "Gilroy Regular";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #fff;
+}
+
 .about__wrapper {
   display: flex;
   flex-direction: column;
@@ -501,7 +920,7 @@ input:focus-visible {
   height: 150px;
   position: absolute;
   bottom: 55%;
-  right: -10px;
+  right: 0;
 }
 
 .about__description {
@@ -551,6 +970,9 @@ input:focus-visible {
 
 .how-it-work {
   padding: 65px 0 90px;
+
+  background: linear-gradient(180deg, #B6FBFF 0%, #96C4E4 18.25%, #83A4D4 100%);
+
 
 }
 
@@ -658,12 +1080,15 @@ input:focus-visible {
 }
 
 .buy {
-  display: block;
+
   background: #44C360;
   -webkit-box-shadow: 0px 0px 30px rgba(94, 117, 71, 0.5);
   box-shadow: 0px 0px 30px rgba(94, 117, 71, 0.5);
   border-radius: 50px;
-  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   max-width: 194px;
   width: 100%;
   height: 54px;
@@ -680,6 +1105,11 @@ input:focus-visible {
 .buyers {
   color: #FFFFFF;
   padding-top: 105px;
+
+
+  background: linear-gradient(54.73deg, #6363BB -4.33%, #3E69B7 47.39%, #5AA8AD 90.71%);
+
+
 }
 
 .buyers__ring {
@@ -750,6 +1180,10 @@ input:focus-visible {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+
+  background: linear-gradient(54.73deg, #6363BB -4.33%, #3E69B7 47.39%, #5AA8AD 90.71%);
+
+
 }
 
 .advantages__title {
@@ -807,6 +1241,12 @@ input:focus-visible {
 
 .feedback {
   padding-top: 100px;
+
+
+  background: linear-gradient(54.73deg, #6363BB -4.33%, #3E69B7 47.39%, #5AA8AD 90.71%);
+
+
+
 }
 
 .feedback__title {
@@ -900,6 +1340,11 @@ input:focus-visible {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+
+
+  background: linear-gradient(54.73deg, #6363BB -4.33%, #3E69B7 47.39%, #5AA8AD 90.71%);
+
+
 }
 
 .questions__title {
@@ -994,6 +1439,7 @@ input:focus-visible {
   width: 1px;
   height: 100%;
   background-color: #fff;
+
 }
 
 .questions__afterlist {
@@ -1007,6 +1453,10 @@ input:focus-visible {
 .author {
   color: #FFFFFF;
   padding-top: 79px;
+
+
+  background: linear-gradient(54.73deg, #6363BB -4.33%, #3E69B7 47.39%, #5AA8AD 90.71%);
+
 }
 
 .author__ring {
@@ -1075,6 +1525,10 @@ input:focus-visible {
   padding-top: 85px;
   display: flex;
   flex-direction: column;
+
+  background: linear-gradient(54.73deg, #6363BB -4.33%, #3E69B7 47.39%, #5AA8AD 90.71%);
+
+
 }
 
 .callback__title {
@@ -1345,6 +1799,44 @@ input:focus-visible {
   background: #B4F7FD;
 }
 
+.content-area {
+  padding-top: 90px;
+
+  background: linear-gradient(54.73deg, #6363BB -4.33%, #3E69B7 47.39%, #5AA8AD 90.71%);
+
+}
+
+.effect__title {
+  font-family: "Gilroy Semibold";
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 110%;
+  text-align: center;
+
+  color: #FFFFFF;
+
+}
+
+.effect__text {
+  font-family: "Gilroy Regular";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 130%;
+
+  color: #FFFFFF;
+
+}
+
+.effect__afterlist {
+  font-family: "Gilroy Bold";
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 130%;
+
+  color: #FFFFFF;
+
+}
+
 @media (min-width: 600px) {
   .about__upper-text {
     max-width: 550px;
@@ -1370,7 +1862,9 @@ input:focus-visible {
     padding: 10px 40px;
   }
 
-  .header {}
+  .header {
+    max-height: 85px;
+  }
 
   .header__logo {
     margin-left: 6px;
@@ -1406,18 +1900,24 @@ input:focus-visible {
   }
 
   .hero {
-    margin-top: 10px;
-    margin-left: 315px;
+    /* margin-top: 10px;
+    margin-left: 315px; */
   }
 
-  .hero__ring {
+  .hero::after {
+    display: block;
+    content: '';
     position: absolute;
     z-index: -1;
     top: -45px;
     right: -40px;
     height: 482px;
     max-width: 200px;
+
+    background-image: url(../img/ring-hero.png);
   }
+
+
 
   .hero__line {
     position: absolute;
@@ -1525,7 +2025,7 @@ input:focus-visible {
     width: 370px;
     height: 210px;
 
-    right: -40px;
+    right: 0;
     bottom: 32%;
 
   }
@@ -1789,18 +2289,36 @@ input:focus-visible {
 
   .hero {
 
-    margin-top: 77px;
-    margin-left: 397px;
+    /* margin-top: 77px;
+    margin-left: 397px; */
   }
 
-  .hero__ring {
+  .hero::after {
+    display: block;
+    content: '';
     position: absolute;
     z-index: -1;
     top: -75px;
     right: -40px;
     height: 534px;
     max-width: 321px;
+
+    background-image: url(../img/ring-hero.png);
   }
+
+  .hero__grid {
+    display: grid;
+    grid-template-columns: 500px 1fr;
+    grid-template-rows: 160px 1fr;
+  }
+
+  .hero__up-box {
+    grid-area: 1 / 1 / 2 / 3;
+  }
+
+  .hero__box {}
+
+
 
   .hero__line {
     position: absolute;
@@ -2297,6 +2815,8 @@ input:focus-visible {
   .hands {
     width: 562px;
     height: 683px;
+    top: 0;
+    left: 100px;
   }
 
   .hands::after {
@@ -2318,18 +2838,7 @@ input:focus-visible {
     padding: 0 100px;
   }
 
-  .header {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-  }
+  .header {}
 
   .header__burger {
     display: none;
@@ -2425,21 +2934,37 @@ input:focus-visible {
 
   .hero {
     color: #FFFFFF;
-    margin-top: 75px;
-    margin-left: 400px;
+    padding-bottom: 155px;
     position: relative;
   }
 
-  .hero__ring {
+  .hero::after {
+    display: block;
+    content: '';
     position: absolute;
-    top: 0px;
-    right: -100px;
-    max-width: 438px;
+    top: 88px;
+    right: 0;
+    width: 484px;
     height: 564px;
+    background-image: url(../img/ring-hero.png);
+    z-index: 1;
   }
 
+  .hero__grid {
+    display: grid;
+    grid-template-columns: 500px 1fr;
+    grid-template-rows: 125px 1fr;
+  }
+
+  .hero__up-box {
+    grid-area: 1 / 1 / 2 / 3;
+  }
+
+  .hero__box {}
+
   .hero__line {
-    left: -165px;
+    left: 337px;
+    top: 305px;
   }
 
   .hero__title {
@@ -2448,6 +2973,16 @@ input:focus-visible {
     font-size: 40px;
     font-weight: 600;
     line-height: 1;
+  }
+
+  .product__title {
+    display: block;
+    font-family: "Gilroy Medium";
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 1;
+    color: #fff;
+    margin-bottom: 20px;
   }
 
   .hero__list {
@@ -2506,6 +3041,10 @@ input:focus-visible {
     padding: 290px 0 66px;
   }
 
+  .about__page-foods {
+    padding-top: 70px;
+  }
+
   .about__ring {
 
     bottom: 0px;
@@ -2520,15 +3059,27 @@ input:focus-visible {
     justify-content: flex-start;
   }
 
+  .about__page-foods .about__upper-text {
+    flex-direction: column;
+    max-width: 52%;
+    gap: 25px;
+    margin-bottom: 0;
+  }
 
   .about__title {
-    display: inline-block;
 
     font-size: 40px;
 
     max-width: 600px;
 
     margin-bottom: 0;
+  }
+
+  .about__page-foods .about__title {
+    text-align: center;
+    max-width: 100%;
+    display: block;
+    margin-bottom: 70px;
   }
 
   .about__subtitle {
@@ -2548,12 +3099,19 @@ input:focus-visible {
     height: 350px;
   }
 
+  .about__page-foods .about__image img,
+  .about__image source {
+    width: 432px;
+    height: 432px;
+
+  }
+
   .about__image-upper img,
   .about__image-upper source {
     width: 600px;
     height: 348px;
     bottom: 18%;
-    right: -100px;
+    right: 0;
 
   }
 
@@ -2613,6 +3171,10 @@ input:focus-visible {
     left: -100px;
     padding-left: 100px;
 
+  }
+
+  .about__page-foods .about__lower {
+    bottom: -84px;
   }
 
   .about__lower-text {
@@ -3327,6 +3889,44 @@ input:focus-visible {
 
   .slick-dots li[class=slick-active] button {
     background: #B4F7FD;
+  }
+
+  .effect {
+    padding-top: 76px;
+  }
+
+  .effect__image img {
+
+    width: 355px;
+    height: 459px;
+
+    filter: drop-shadow(0px 0px 50px rgba(54, 69, 120, 0.3));
+
+    position: relative;
+    left: -98px;
+    bottom: -45px;
+  }
+
+  .effect__btn {
+    width: 100%;
+    max-width: 360px;
+    height: 68px;
+
+    background-color: #44C360;
+    box-shadow: 0px 0px 30px rgba(94, 117, 71, 0.5);
+    border-radius: 50px;
+    border: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: "Gilroy Bold";
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 150%;
+
+    color: #FFFFFF;
   }
 }
 

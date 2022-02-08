@@ -1,4 +1,5 @@
 // Слайдер
+jQuery( function( $ ) {
 
 $(document).ready(function () {
   $('.feedback__slider').slick({
@@ -87,9 +88,9 @@ $(document).ready(function () {
     ]
   });
 
-  $('.product-thumb-carousel').slick({,
-    slidesToShow: 1,
-  });
+  // $('.product-thumb-carousel').slick({,
+  //   slidesToShow: 1,
+  // });
 
 
   $('.questions__toggle').on("click", function (event) {
@@ -122,3 +123,12 @@ function isWebp() {
     document.documentElement.classList.add(className);
   });
 }
+
+
+});
+
+
+
+
+
+

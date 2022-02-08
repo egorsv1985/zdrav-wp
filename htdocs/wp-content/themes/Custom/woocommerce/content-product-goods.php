@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The template for displaying product content within loops
  *
@@ -15,24 +16,26 @@
  * @version 3.6.0
  */
 
-defined( 'ABSPATH' ) || exit;
+defined('ABSPATH') || exit;
 
 global $product;
 
 
 // Ensure visibility.
-if ( empty( $product ) || ! $product->is_visible() ) {
-	return;
+if (empty($product) || !$product->is_visible()) {
+  return;
 }
 
 $product_published = $product->get_date_created(); // $product_published->date
 ?>
 <!-- Start Single Product -->
 
-<div class="how-it-work__item">
+
+
+<section class="how-it-work__item">
   <div class="item__box-img">
-  	<?php echo $product->get_image() ?>
-  </div>            
+    <?php echo $product->get_image() ?>
+  </div>
   <div class="item-info">
     <h3 class="item-title"><?php echo $product->get_title() ?></h3>
     <span class="item-price"><?php echo $product->get_price_html() ?></span>
@@ -44,7 +47,7 @@ $product_published = $product->get_date_created(); // $product_published->date
       </a>
     </div>
   </div>
-</div>
+</section>
 
 
 

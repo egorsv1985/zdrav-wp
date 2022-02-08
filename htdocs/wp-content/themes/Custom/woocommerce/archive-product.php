@@ -25,79 +25,14 @@ get_header();
 
 
 
-<?php if(is_shop()){ ?>
-  <section class="news-line sale">
-  </section>
 
-  <section id="sales-block-shop">
-    <div class="container">
-      <div class="row">
-        <?php
-           $field = get_field('zapis');
-           $args = array( 
-            'posts_per_page' => 2,
-            'post__in'  =>  $field
-            // 'offset' => 1, 
-            // 'facetwp' => true,  
-            // 'cat' => 1,  
-            // 'cat' => 1,  
-          );
-          $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
-          $query = new WP_Query( $args );
-          while ( $query->have_posts() ) {
-          $query->the_post();
+<?php
+if ( is_search() ) { ?>
 
-          ?>
+<h1>страница поиска</h1>
 
-
-                   
-
-
-          <div class="col-lg-6">
-            <div class="block">
-              <a href="<?php the_permalink(); ?>" class="img-block img2" style="background-image: url(<?php the_post_thumbnail_url( 'full' ); ?>);"></a>
-              <div class="inner">
-                <div class="title-block img2"><?php the_title(); ?></div>
-                <div class="title-text img2"><?php the_excerpt(); ?></div>
-              </div>
-              
-            </div>
-            
-          </div>
-
-
-
-          <?php
-          }
-          ?>
-         
-          <?php
-          wp_reset_postdata(); 
-              
-        ?>
-      
-      </div>
-    </div>
-  </section>
-
-  <section id="brands-slider">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="title">Бренды</div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-12">
-          <?php echo do_shortcode('[brands_page]') ?>
-        </div>
-      </div>
-    </div>
-  </section>
-
-<?php  } ?>
-
-
+<?php }
+?>
 
 
 
@@ -110,11 +45,8 @@ get_header();
         	<div class="col-lg-2 filter-column">
 				    
 
-				    <button class="reset-btn" onclick="FWP.reset()">Сбросить фильтры</button>
+				   <?php dynamic_sidebar( 'shop_left_sideber' ); ?>
 
-
-				   <!--  <a href="#" class="banner-left-block hidden-xs" style="background-image: url(https://cdn.aizel.ru/i/1326040.jpg);"></a>
-				     -->
 
 
         	</div>
@@ -123,7 +55,9 @@ get_header();
 
 
             <!-- Start Shop Page Product Area -->
-            <div class="col-lg-10 facetwp-template">
+            <div class="col-lg-10">
+
+              <h1><?php the_title(); ?></h1>
 
 
 							<?php if ( woocommerce_product_loop() ) { ?>
@@ -151,8 +85,10 @@ get_header();
 
 							?>
 
-                <div class="page-pagination-wrapper">
+              <div class="page-pagination-wrapper">
               	<?php do_action( 'woocommerce_after_shop_loop' ); ?>
+
+                <?php echo paginate_links( $args ) ?>
 							</div>
 
 

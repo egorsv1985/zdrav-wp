@@ -3,11 +3,22 @@
     <div class="footer__logo"><?php echo get_custom_logo(); ?>
       <h3 class="logo-text">СИМВОЛО-АДАПТЕРЫ: серия ЗДРАВ</h3>
     </div>
-    <div class="footer__menu">
+
+    <?php
+      wp_nav_menu(
+        array(
+          'theme_location' => 'foot_menu',
+          'container' => false,
+          'menu_class' => 'footer__menu menu',
+        )
+      );
+    ?>
+
+   <!--  <div class="footer__menu">
       <a href="#how-it-work" class="menu-item">Серия ЗДРАВ </a>
       <a href="#author" class="menu-item">Об авторе</a>
       <a href="#feedback" class="menu-item">Отзывы</a>
-    </div>
+    </div> -->
     <div class="footer__social">
       <h4>Контакты</h4>
       <div class="links">
