@@ -4,42 +4,36 @@ Template Name: main page
 */
 ?>
 
-<?php if( is_page( 2 ) ){
+<?php if (is_page(2)) {
   // get_template_part( 'header-page' );  
   get_header();
-
-} else { 
+} else {
   get_header();
-
- } ?>
-
-
-
-
-
-
-
+} ?>
 
 <div class="wrapper">
+  <!-- <div class="hands">
+    <picture>
+      <source class="hands__image" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/hands.webp" type="image/webp" alt="">
+      <img class="hands__image" src="<?php echo get_template_directory_uri(); ?>/assets/img/hands.jpg" alt="" />
+    </picture>
+  </div> -->
 
-<div class="hands">
-  <picture>
-    <source class="hands__image" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/hands.webp" type="image/webp" alt="">
-    <img class="hands__image" src="<?php echo get_template_directory_uri(); ?>/assets/img/hands.jpg" alt="" />
-  </picture>
-</div>
 
-
+  <div class="hands-two">
+    <img src="<?php bloginfo('template_url'); ?>/assets/img/hands2.png" srcset="<?php bloginfo('template_url'); ?>/assets/img/hands2@2x.png 2x" alt="">
+    <svg class="" width="435" height="53" viewBox="0 0 435 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="5.5" cy="47.5" r="5.5" fill="#C0FBFF" />
+        <path d="M8.5 47L165.042 1H435" stroke="#C0FBFF" />
+      </svg>
+  </div>
 
   <section class="hero">
     <div class="hero__grid">
       <div class="hero__up-box"></div>
       <div class="hero__box"></div>
       <div class="hero__wrap">
-        <svg class="hero__line" width="435" height="53" viewBox="0 0 435 53" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="5.5" cy="47.5" r="5.5" fill="#C0FBFF" />
-          <path d="M8.5 47L165.042 1H435" stroke="#C0FBFF" />
-        </svg>
+         
 
         <h1 class="hero__title">Как не болеть и сохранить здоровье для энергичной жизни</h1>
         <h2 class="hero__subtitle">Применение устройства ЗДРАВ:</h2>
@@ -50,7 +44,17 @@ Template Name: main page
           <li class="hero__item">Подходит всем.</li>
         </ul>
         <div class="hero__btn-group">
-          <a href="#callback"><button class="btn-modal">Получить онлайн консультацию</button></a>
+          <a class="btn-modal" data-fancybox data-src="#hidden-content" href="javascript:;">
+            Получить онлайн консультацию
+          </a>
+
+          
+
+          <a data-fancybox data-type="iframe" data-src="https://domainfortest.space/product/zdrav-mertvaya-voda/" href="javascript:;">
+            Webpage
+          </a>
+
+          <!-- <a href="#callback"><button class="btn-modal">Получить онлайн консультацию</button></a> -->
           <a class="hero__btn-link" href="#how-it-work">
             <span class="hero__more">Все устройства</span>
             <div class="hero__more-arrow"></div>
@@ -61,120 +65,136 @@ Template Name: main page
   </section>
 
 
-  <div class="side-links">
-    <a href="">
-      <img src="<?php bloginfo('template_url'); ?>/assets/img/instagram.svg" alt="">
-    </a>
-    <a href="">
-      <img src="<?php bloginfo('template_url'); ?>/assets/img/telegram.svg" alt="">
-    </a>
-    <a href="">
-      <img src="<?php bloginfo('template_url'); ?>/assets/img/whatsapp.svg" alt="">
-    </a>
+  <div style="display: none;" id="hidden-content">
+    <h2>Hello</h2>
+    <p>You are awesome.</p>
   </div>
-  
+
+  <ul class="side__contacts contacts">
+    <li class="contacts__item">
+      <a class="contacts__links" href="#">
+        <img class="contacts__img" src="<?php echo get_template_directory_uri(); ?>/assets/img/instagram.svg" alt="">
+      </a>
+    </li>
+    <li class="contacts__item">
+      <a class="contacts__links" href="#">
+        <img class="contacts__img" src="<?php echo get_template_directory_uri(); ?>/assets/img/telegram.svg" alt="">
+      </a>
+    </li>
+    <li class="contacts__item">
+      <a class="contacts__links" href="#">
+        <img class="contacts__img" src="<?php echo get_template_directory_uri(); ?>/assets/img/whatsapp.svg" alt="">
+      </a>
+    </li>
+  </ul>
+
+
+
+
+  <section class="about">
+    <div class="container">
+      <div class="about__wrap">
+        <div class="about__upper-text">
+          <h2 class="about__title">Что такое устройство ЗДРАВ:</h2>
+          <p class="about__subtitle">Внешне простое изделие, влияющие на структуру материи, подстраивающее её, под
+            нужды любого человека самым оптимальным, для него образом.</p>
+        </div>
+        <div class="about__wrapper">
+          <div class="about__image-upper">
+            <picture>
+              <source srcset="<?php echo get_template_directory_uri(); ?>/assets/img/upper-image.webp" type="image/webp" alt="upper-image">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/upper-image.png" alt="upper-image" />
+            </picture>
+          </div>
+          <p class="about__description">Изделие сделано по уникальной технологии из экологичных материалов. Является
+            сильным помощником для естественного укрепления иммунитета человека. В основе наших разработок лежит
+            технология управляемого пси-поля, создаваемого для нормализации продуктов и защиты организма от разрушающих
+            факторов. Он работает не от батарейки, а на иных физико-полевых законах природы.</p>
+        </div>
+        <div class="about__lower">
+          <p class="about__lower-text">Это новая технология, у которой нет аналогов.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
 </div>
 
 
-
-<section class="about">
-  <div class="container">
-    <div class="about__wrap">
-      <div class="about__upper-text">
-        <h2 class="about__title">Что такое устройство ЗДРАВ:</h2>
-        <p class="about__subtitle">Внешне простое изделие, влияющие на структуру материи, подстраивающее её, под
-          нужды любого человека самым оптимальным, для него образом.</p>
-      </div>
-      <div class="about__wrapper">
-        <div class="about__image-upper">
-          <picture>
-            <source srcset="<?php echo get_template_directory_uri(); ?>/assets/img/upper-image.webp" type="image/webp" alt="upper-image">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/upper-image.png" alt="upper-image" />
-          </picture>
-        </div>
-        <p class="about__description">Изделие сделано по уникальной технологии из экологичных материалов. Является
-          сильным помощником для естественного укрепления иммунитета человека. В основе наших разработок лежит
-          технология управляемого пси-поля, создаваемого для нормализации продуктов и защиты организма от разрушающих
-          факторов. Он работает не от батарейки, а на иных физико-полевых законах природы.</p>
-      </div>
-      <div class="about__lower">
-        <p class="about__lower-text">Это новая технология, у которой нет аналогов.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
 <section class="how-it-work" id="how-it-work">
-  <div class="container">
-    <h2 class="how-it-work__title">Как работает</h2>
-    <h3 class="how-it-work__subtitle">Воздействие каждого из серии устройств ЗДРАВ разное:</h3>
-    <div class="how-it-work__list">
+  <div class="inner-block">
+    <div class="container">
+      <h2 class="how-it-work__title">Как работает</h2>
+      <h3 class="how-it-work__subtitle">Воздействие каждого из серии устройств ЗДРАВ разное:</h3>
+      <div class="how-it-work__list">
 
 
-      <!-- Рекомендуемые товары -->
+        <!-- Рекомендуемые товары -->
 
-      <?php
-      $product_ids_on_sale = wc_get_product_ids_on_sale();
-      $args = array(
-        'post_type' => 'product',
-        'tax_query' => array(
-          array(
-            'taxonomy' => 'product_visibility',
-            'field'    => 'name',
-            'terms'    => 'featured',
+        <?php
+        $product_ids_on_sale = wc_get_product_ids_on_sale();
+        $args = array(
+          'post_type' => 'product',
+          'tax_query' => array(
+            array(
+              'taxonomy' => 'product_visibility',
+              'field'    => 'name',
+              'terms'    => 'featured',
+            ),
           ),
-        ),
-        'posts_per_page' => 6,
-        'orderby' => 'rand'
-      );
-      $loop = new WP_Query($args);
-      if ($loop->have_posts()) {
-        while ($loop->have_posts()) : $loop->the_post();
-          wc_get_template_part('content', 'product');
-        endwhile;
-      } else {
-        echo __('');
-      }
-      wp_reset_postdata();
-      ?>
+          'posts_per_page' => 6,
+          'orderby' => 'rand'
+        );
+        $loop = new WP_Query($args);
+        if ($loop->have_posts()) {
+          while ($loop->have_posts()) : $loop->the_post();
+            wc_get_template_part('content', 'product');
+          endwhile;
+        } else {
+          echo __('');
+        }
+        wp_reset_postdata();
+        ?>
 
 
-      <!--   <?php
-              $my_posts = get_posts(array(
-                'numberposts' => 0,
-                'order' => 'ASC',
-                'category_name'    => 'items',
-                'post_type'   => 'post',
-                'suppress_filters' => true,
-              ));
+        <!--   <?php
+                $my_posts = get_posts(array(
+                  'numberposts' => 0,
+                  'order' => 'ASC',
+                  'category_name'    => 'items',
+                  'post_type'   => 'post',
+                  'suppress_filters' => true,
+                ));
 
-              foreach ($my_posts as $post) {
-                setup_postdata($post);
-              ?>
-    <div class="how-it-work__item">
-      <div class="item__box-img">
-        <img src="<?php the_field('item-image'); ?>" alt="" class="item-img">
-      </div>            
-      <div class="item-info">
-        <h3 class="item-title"><?php the_title(); ?></h3>
-        <p class="item-description"><?php the_content(); ?></p>
-        <span class="item-price"><?php the_field('item-price'); ?> руб.</span>
-        <div class="item-btn-group">
-          <button class="buy">Купить сейчас</button>
-          <a class="hero__btn-link" href="<?php the_field('link'); ?>">
-            <span class="hero__more">Подробнее</span>
-            <div class="hero__more-arrow"></div>
-          </a>
+                foreach ($my_posts as $post) {
+                  setup_postdata($post);
+                ?>
+      <div class="how-it-work__item">
+        <div class="item__box-img">
+          <img src="<?php the_field('item-image'); ?>" alt="" class="item-img">
+        </div>            
+        <div class="item-info">
+          <h3 class="item-title"><?php the_title(); ?></h3>
+          <p class="item-description"><?php the_content(); ?></p>
+          <span class="item-price"><?php the_field('item-price'); ?> руб.</span>
+          <div class="item-btn-group">
+            <button class="buy">Купить сейчас</button>
+            <a class="hero__btn-link" href="<?php the_field('link'); ?>">
+              <span class="hero__more">Подробнее</span>
+              <div class="hero__more-arrow"></div>
+            </a>
+          </div>
         </div>
       </div>
-    </div>
-    <?php
-              }
+      <?php
+                }
 
-              wp_reset_postdata();
-    ?>           -->
+                wp_reset_postdata();
+      ?>           -->
+      </div>
     </div>
   </div>
+  
 </section>
 
 
@@ -186,7 +206,30 @@ Template Name: main page
         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/human.svg" alt="" class="buyers__human">
       </div>
       <div class="buyers__list">
-        <ul>
+        <ul>  
+
+
+
+
+           <?php
+            // check if the repeater field has rows of data
+            if( have_rows('opisanie_pokupatelej') ):
+              // loop through the rows of data
+                while ( have_rows('opisanie_pokupatelej') ) : the_row(); ?>
+          
+              <li class="buyers__item">
+                <h3 class="buyers__text"><?php echo the_sub_field('tekst') ?></h3>
+                <div class="buyers__line"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/Line.svg" alt=""></div>
+              </li>    
+                  
+          
+                <?php endwhile;
+            else :
+                // no rows found
+            endif;
+          ?>
+
+
 
           <?php
           $my_posts = get_posts(array(
@@ -235,7 +278,10 @@ Template Name: main page
           зависимостей к чему-либо</span>
       </li>
     </ul>
-    <a href="#callback"><button class="advantages__btn btn-modal">Получить онлайн консультацию</button></a>
+    <a data-fancybox data-src="#hidden-content" href="javascript:;"><button class="advantages__btn btn-modal">Получить онлайн консультацию</button></a>
+    <div style="display: none;" id="hidden-content">
+      <?php echo do_shortcode('[contact-form-7 id="284" title="Контактная форма"]') ?>
+    </div>
   </div>
 </section>
 <section class="feedback" id="feedback">

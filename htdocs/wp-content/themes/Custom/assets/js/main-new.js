@@ -1,4 +1,4 @@
-jQuery( function( $ ) {
+jQuery(function ($) {
 
   $('.product-thumb-carousel').slick({
     slidesToShow: 1,
@@ -20,13 +20,13 @@ jQuery( function( $ ) {
 
 
 
-  $('.header__burger').on('click', function(){
+  $('.header__burger').on('click', function () {
     console.log('click btn');
     $('.menu-right').addClass('open');
   });
 
 
-  $('.menu-right .close-btn').on('click', function(){
+  $('.menu-right .close-btn').on('click', function () {
     $('.menu-right').removeClass('open');
   });
   // $('.menu-right a').on('click', function(){
@@ -34,12 +34,32 @@ jQuery( function( $ ) {
   // });
 
 
-  $('.mobile_menu li.menu-item-has-children > a').on('click', function(e){
+  $('.mobile_menu li.menu-item-has-children > a').on('click', function (e) {
     e.preventDefault();
 
     $(this).next().slideToggle();
   })
 
+
+  $('.header_menu li.none-link > a').on('click', function (e) {
+    e.preventDefault();
+  })
+
+
+
+
+    var header = $(".header");
   
+    $(window).scroll(function() {    
+        var scroll = $(window).scrollTop();
+        if (scroll >= 500) {
+            header.addClass("scrolled");
+        } else {
+            header.removeClass("scrolled");
+        }
+    });
+  
+
+
 
 });

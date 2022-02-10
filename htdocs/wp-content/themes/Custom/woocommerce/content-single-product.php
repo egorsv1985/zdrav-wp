@@ -29,7 +29,12 @@ global $product;
       <div class="col-lg-12 text-center">
         <div class="page-header-content">
           <div class="woo-breads">
-            <?php woocommerce_breadcrumb() ?>
+            <!-- <?php woocommerce_breadcrumb() ?> -->
+            <?php
+            if ( function_exists('yoast_breadcrumb') ) {
+              yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
+            }
+            ?>
           </div>
         </div>
       </div>

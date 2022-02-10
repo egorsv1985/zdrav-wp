@@ -13,6 +13,7 @@ function contact_styles()
         wp_enqueue_style('add', get_template_directory_uri() . '/assets/css/add.css');
         //отключаем стили
         wp_dequeue_style('main');
+        wp_enqueue_style('fancybox', 'https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css', array(), wp_get_theme()->get('Version'));
     }
 }
 
@@ -26,10 +27,11 @@ function add_logo()
 
 function style_theme()
 {
-    wp_enqueue_style('style', get_stylesheet_uri());
     wp_enqueue_style('slick', '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css');
     wp_enqueue_style('woocommerce', get_template_directory_uri() . '/assets/css/woocommerce.css');
+    // wp_enqueue_style('bs', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css');
     wp_enqueue_style('main', get_template_directory_uri() . '/assets/css/main.css');
+    wp_enqueue_style('style', get_stylesheet_uri());
 }
 
 function scripts_theme()
@@ -150,3 +152,20 @@ function my_theme_cart_button_text()
     return 'Купить сейчас';
 }
 add_filter('woocommerce_product_single_add_to_cart_text', 'my_theme_cart_button_text');
+
+
+// Add Fancybox in footer
+function add_fancybox()
+{
+    if (is_singular()) {
+        echo "<script src=\"https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js\"></script>";
+
+        echo '<script type="text/javascript">
+                 $(document).ready(function(){
+                     $(".wp-block-image").find("a:has(img)").addClass(\'fancyboxImg\');
+                     $("a.fancyboxImg").fancybox({\'transitionIn\':\'elastic\',\'transitionOut\':\'elastic\',\'speedIn\':600,\'speedOut\':200,\'overlayShow\':false});
+                 });
+             </script>';
+    }
+}
+add_action('wp_footer', 'add_fancybox');
