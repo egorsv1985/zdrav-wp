@@ -19,23 +19,15 @@
 defined('ABSPATH') || exit;
 
 ?>
-<div class="page-header-wrapper">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-12 text-center">
-				<div class="page-header-content">
-					<!-- <div class="woo-breads">
-						<?php woocommerce_breadcrumb() ?>
-					</div> -->
-					<?php
-					if (function_exists('yoast_breadcrumb')) {
-						yoast_breadcrumb('<p id="breadcrumbs">', '</p>');
-					}
-					?>
-				</div>
-			</div>
-		</div>
-	</div>
+
+
+<div class="path">
+	<?php
+	if (function_exists('yoast_breadcrumb')) {
+		yoast_breadcrumb('<p id="breadcrumbs">', '</p>');
+	}
+	?>
+
 </div>
 
 
@@ -44,7 +36,7 @@ defined('ABSPATH') || exit;
 </div>
 
 <!--== Start Cart Page Wrapper ==-->
-<div id="cart-page-wrapper" class="pt-86 pt-md-56 pt-sm-46 pb-50 pb-md-20 pb-sm-10">
+<div id="cart-page-wrapper" class="cart__wrapper">
 	<div class="row">
 		<div class="col-lg-8">
 			<?php do_action('woocommerce_before_cart'); ?>
@@ -55,7 +47,7 @@ defined('ABSPATH') || exit;
 						<table class="shop_table shop_table_responsive cart woocommerce-cart-form__contents table table-bordered text-center">
 							<thead>
 								<tr>
-
+									<th></th>
 									<th>Цена</th>
 									<th>Количество</th>
 									<th>Итого</th>
@@ -187,7 +179,8 @@ defined('ABSPATH') || exit;
 		</div>
 	</div>
 </div>
-</div>
+
+
 <!--== End Cart Page Wrapper ==-->
 
 <?php do_action('woocommerce_after_cart'); ?>

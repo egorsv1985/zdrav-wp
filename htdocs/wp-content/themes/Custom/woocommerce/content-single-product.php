@@ -42,8 +42,6 @@ $product_gallery_ids = $product->get_gallery_image_ids();
 $image_url = wp_get_attachment_image_url($product_image_id, 'full');
 ?>
 
-
-
 <!--== Start Single Product Page Wrapper ==-->
 <div id="single-product-page" <?php wc_product_class('add_custom_class', $product); ?>>
   <div class="container">
@@ -54,14 +52,10 @@ $image_url = wp_get_attachment_image_url($product_image_id, 'full');
     </div>
   </div>
 
-
-
   <div class="container">
     <div class="row">
       <div class="product__wrap">
         <div class="product-thumb-carousel vertical-tab">
-
-
           <div>
             <?php echo $product->get_image() ?>
           </div>
@@ -97,8 +91,6 @@ $image_url = wp_get_attachment_image_url($product_image_id, 'full');
 
       <div class="product__wrapper">
         <h2 class="product__title"><?php the_title(); ?></h2>
-
-
         <div class="price">
           <?php echo $product->get_price_html() ?>
         </div>
