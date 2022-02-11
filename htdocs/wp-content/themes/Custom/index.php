@@ -12,20 +12,15 @@ Template Name: main page
 } ?>
 
 <div class="wrapper">
-  <!-- <div class="hands">
-    <picture>
-      <source class="hands__image" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/hands.webp" type="image/webp" alt="">
-      <img class="hands__image" src="<?php echo get_template_directory_uri(); ?>/assets/img/hands.jpg" alt="" />
-    </picture>
-  </div> -->
 
 
-  <div class="hands-two">
+
+  <div class="hands">
     <img src="<?php bloginfo('template_url'); ?>/assets/img/hands2.png" srcset="<?php bloginfo('template_url'); ?>/assets/img/hands2@2x.png 2x" alt="">
     <svg class="" width="435" height="53" viewBox="0 0 435 53" fill="none" xmlns="http://www.w3.org/2000/svg">
       <circle cx="5.5" cy="47.5" r="5.5" fill="#C0FBFF" />
-        <path d="M8.5 47L165.042 1H435" stroke="#C0FBFF" />
-      </svg>
+      <path d="M8.5 47L165.042 1H435" stroke="#C0FBFF" />
+    </svg>
   </div>
 
   <section class="hero">
@@ -33,7 +28,7 @@ Template Name: main page
       <div class="hero__up-box"></div>
       <div class="hero__box"></div>
       <div class="hero__wrap">
-         
+
 
         <h1 class="hero__title">Как не болеть и сохранить здоровье для энергичной жизни</h1>
         <h2 class="hero__subtitle">Применение устройства ЗДРАВ:</h2>
@@ -48,11 +43,9 @@ Template Name: main page
             Получить онлайн консультацию
           </a>
 
-          
 
-          <a data-fancybox data-type="iframe" data-src="https://domainfortest.space/product/zdrav-mertvaya-voda/" href="javascript:;">
-            Webpage
-          </a>
+
+
 
           <!-- <a href="#callback"><button class="btn-modal">Получить онлайн консультацию</button></a> -->
           <a class="hero__btn-link" href="#how-it-work">
@@ -66,8 +59,7 @@ Template Name: main page
 
 
   <div style="display: none;" id="hidden-content">
-    <h2>Hello</h2>
-    <p>You are awesome.</p>
+    <?php echo do_shortcode('[contact-form-7 id="284" title="Контактная форма"]') ?>
   </div>
 
   <ul class="side__contacts contacts">
@@ -194,7 +186,7 @@ Template Name: main page
       </div>
     </div>
   </div>
-  
+
 </section>
 
 
@@ -206,52 +198,25 @@ Template Name: main page
         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/human.svg" alt="" class="buyers__human">
       </div>
       <div class="buyers__list">
-        <ul>  
+        <ul>
+          <?php
+          // check if the repeater field has rows of data
+          if (have_rows('opisanie_pokupatelej')) :
+            // loop through the rows of data
+            while (have_rows('opisanie_pokupatelej')) : the_row(); ?>
 
-
-
-
-           <?php
-            // check if the repeater field has rows of data
-            if( have_rows('opisanie_pokupatelej') ):
-              // loop through the rows of data
-                while ( have_rows('opisanie_pokupatelej') ) : the_row(); ?>
-          
               <li class="buyers__item">
                 <h3 class="buyers__text"><?php echo the_sub_field('tekst') ?></h3>
                 <div class="buyers__line"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/Line.svg" alt=""></div>
-              </li>    
-                  
-          
-                <?php endwhile;
-            else :
-                // no rows found
-            endif;
+              </li>
+
+
+          <?php endwhile;
+          else :
+          // no rows found
+          endif;
           ?>
 
-
-
-          <?php
-          $my_posts = get_posts(array(
-            'numberposts' => 0,
-            'order' => 'ASC',
-            'category_name'    => 'customers',
-            'post_type'   => 'post',
-            'suppress_filters' => true,
-          ));
-
-          foreach ($my_posts as $post) {
-            setup_postdata($post);
-          ?>
-            <li class="buyers__item">
-              <h3 class="buyers__text"><?php the_title(); ?></h3>
-              <div class="buyers__line"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/Line.svg" alt=""></div>
-            </li>
-          <?php
-          }
-
-          wp_reset_postdata();
-          ?>
         </ul>
       </div>
     </div>
@@ -284,6 +249,8 @@ Template Name: main page
     </div>
   </div>
 </section>
+
+
 <section class="feedback" id="feedback">
 
   <h2 class="feedback__title">Отзывы</h2>
@@ -326,28 +293,26 @@ Template Name: main page
     <div class="questions__list">
 
       <?php
-      $my_posts = get_posts(array(
-        'numberposts' => 0,
-        'order' => 'ASC',
-        'category_name'    => 'questions',
-        'post_type'   => 'post',
-        'suppress_filters' => true,
-      ));
-
-      foreach ($my_posts as $post) {
-        setup_postdata($post);
-      ?>
-        <div class="questions__item">
-          <div class="questions__toggle" id="toggle-<?php the_ID(); ?>"><span class="questions__toggle-hor"></span><span class="questions__toggle-ver"></span>
+      // check if the repeater field has rows of data
+      if (have_rows('voprosy')) :
+        // loop through the rows of data
+        while (have_rows('voprosy')) : the_row(); ?>
+          <div class="questions__item">
+            <div class="questions__toggle" id="toggle-<?php the_ID(); ?>">
+              <span class="questions__toggle-hor"></span>
+              <span class="questions__toggle-ver"></span>
+            </div>
+            <h3 class="item-title"><?php echo the_sub_field('zagolovok') ?></h3>
+            <p class="item-text"><?php echo the_sub_field('tekst') ?></p>
           </div>
-          <h3 class="item-title"><?php the_title(); ?></h3>
-          <p class="item-text" id="text-<?php the_ID(); ?>"><?php the_content(); ?></p>
-        </div>
-      <?php
-      }
 
-      wp_reset_postdata();
+
+      <?php endwhile;
+      else :
+      // no rows found
+      endif;
       ?>
+
     </div>
     <span class="questions__afterlist">Но, скажу я вам, ЭТО РАБОТАЕТ.</span>
   </div>

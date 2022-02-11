@@ -25,28 +25,21 @@ global $product;
 
 <div class="page-header-wrapper">
   <div class="container">
-    <div class="row">
-      <div class="col-lg-12 text-center">
-        <div class="page-header-content">
-          <div class="woo-breads">
-            <!-- <?php woocommerce_breadcrumb() ?> -->
-            <?php
-            if ( function_exists('yoast_breadcrumb') ) {
-              yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
-            }
-            ?>
-          </div>
-        </div>
-      </div>
+    <div class="path">
+      <?php
+      if (function_exists('yoast_breadcrumb')) {
+        yoast_breadcrumb('<p id="breadcrumbs">', '</p>');
+      }
+      ?>
     </div>
   </div>
 </div>
 <!-- End Page Header Wrapper -->
 
 <?php
-  $product_image_id = $product->get_image_id();
-  $product_gallery_ids = $product->get_gallery_image_ids();
-  $image_url = wp_get_attachment_image_url($product_image_id, 'full');
+$product_image_id = $product->get_image_id();
+$product_gallery_ids = $product->get_gallery_image_ids();
+$image_url = wp_get_attachment_image_url($product_image_id, 'full');
 ?>
 
 
@@ -67,7 +60,7 @@ global $product;
     <div class="row">
       <div class="product__wrap">
         <div class="product-thumb-carousel vertical-tab">
-            
+
 
           <div>
             <?php echo $product->get_image() ?>
@@ -99,7 +92,7 @@ global $product;
             <?php endforeach; ?>
           <?php endif; ?>
         </div>
-        
+
       </div>
 
       <div class="product__wrapper">
@@ -115,14 +108,15 @@ global $product;
         </div>
 
         <p class="product__description">
-          <?php echo $product->get_short_description() ?>  
+          <?php echo $product->get_short_description() ?>
         </p>
 
         <div class="bottom_header">
           <?php the_field('zagolovok_pod_kratkim_opisaniem') ?>
         </div>
 
-        
+
+
 
       </div>
     </div>
@@ -148,7 +142,7 @@ global $product;
           Даже не очень качественная вода, пройдя 30-минутную обработку (на крепкий алкоголь через 3-5 минут) устройством «Вода-жизнь», уже не нанесёт тот вред, который могла бы доставить нашему организму.</p> -->
         <div class="about__lower">
           <p class="about__lower-text"><?php the_field('tekst_sleva') ?></p>
-        </div> 
+        </div>
       </div>
       <div class="about__wrapper">
         <div class="about__image">
@@ -165,7 +159,7 @@ global $product;
 
     </div>
   </div>
-  
+
 
 </section>
 
@@ -210,14 +204,14 @@ global $product;
 <section id="related-products-wrapper" class="pb-48 pb-md-18 pb-sm-8">
   <div class="container">
     <div class="row">
-        <!-- Start Section title -->
-        <div class="col">
-          <div class="section-title-wrap">
-            <h2>С этим товаром покупают</h2>
-          </div>
+      <!-- Start Section title -->
+      <div class="col">
+        <div class="section-title-wrap">
+          <h2>С этим товаром покупают</h2>
         </div>
-        <!-- End Section title -->
       </div>
+      <!-- End Section title -->
+    </div>
 
 
     <div class="products-on-column">
@@ -244,7 +238,7 @@ global $product;
         ?>
 
       <?php endforeach; ?>
-      
+
     </div>
   </div>
 </section>

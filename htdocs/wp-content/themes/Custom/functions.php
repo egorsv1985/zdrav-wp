@@ -6,16 +6,16 @@ add_action('after_setup_theme', 'add_logo');
 add_action('wp_enqueue_scripts', 'contact_styles');
 
 
-function contact_styles()
-{
-    if (is_page(array(88, 97, 104, 134, 166, 170, 172, 168, 292, 288))) {
-        //подключаем стили
-        wp_enqueue_style('add', get_template_directory_uri() . '/assets/css/add.css');
-        //отключаем стили
-        wp_dequeue_style('main');
-        wp_enqueue_style('fancybox', 'https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css', array(), wp_get_theme()->get('Version'));
-    }
-}
+// function contact_styles()
+// {
+//     if (is_page(array(88, 97, 104, 134, 166, 170, 172, 168, 292, 288))) {
+//         //подключаем стили
+//         wp_enqueue_style('add', get_template_directory_uri() . '/assets/css/add.css');
+//         //отключаем стили
+//         wp_dequeue_style('main');
+//         wp_enqueue_style('fancybox', 'https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css', array(), wp_get_theme()->get('Version'));
+//     }
+// }
 
 
 function add_logo()

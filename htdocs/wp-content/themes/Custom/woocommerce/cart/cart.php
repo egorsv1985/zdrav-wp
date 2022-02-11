@@ -24,9 +24,14 @@ defined('ABSPATH') || exit;
 		<div class="row">
 			<div class="col-lg-12 text-center">
 				<div class="page-header-content">
-					<div class="woo-breads">
+					<!-- <div class="woo-breads">
 						<?php woocommerce_breadcrumb() ?>
-					</div>
+					</div> -->
+					<?php
+					if (function_exists('yoast_breadcrumb')) {
+						yoast_breadcrumb('<p id="breadcrumbs">', '</p>');
+					}
+					?>
 				</div>
 			</div>
 		</div>
@@ -50,7 +55,7 @@ defined('ABSPATH') || exit;
 						<table class="shop_table shop_table_responsive cart woocommerce-cart-form__contents table table-bordered text-center">
 							<thead>
 								<tr>
-									
+
 									<th>Цена</th>
 									<th>Количество</th>
 									<th>Итого</th>
@@ -74,7 +79,7 @@ defined('ABSPATH') || exit;
 											<td class="product-list">
 												<div class="cart-product-item d-flex align-items-center">
 
-													
+
 
 													<?php
 													$thumbnail = apply_filters('woocommerce_cart_item_thumbnail', $_product->get_image(), $cart_item, $cart_item_key);
@@ -122,16 +127,16 @@ defined('ABSPATH') || exit;
 												<span class="price"><?php echo WC()->cart->get_product_subtotal($_product, $cart_item['quantity']) ?></span>
 
 												<div class="remove-icon product-remove">
-														<?php
-														echo sprintf(
-															'<a href="%s" class="remove" aria-label="%s" data-product_id="%s" data-product_sku="%s">X</a>',
-															esc_url(wc_get_cart_remove_url($cart_item_key)),
-															esc_html__('Remove this item', 'woocommerce'),
-															esc_attr($product_id),
-															esc_attr($_product->get_sku())
-														);
-														?>
-													</div>
+													<?php
+													echo sprintf(
+														'<a href="%s" class="remove" aria-label="%s" data-product_id="%s" data-product_sku="%s">X</a>',
+														esc_url(wc_get_cart_remove_url($cart_item_key)),
+														esc_html__('Remove this item', 'woocommerce'),
+														esc_attr($product_id),
+														esc_attr($_product->get_sku())
+													);
+													?>
+												</div>
 											</td>
 										</tr>
 
