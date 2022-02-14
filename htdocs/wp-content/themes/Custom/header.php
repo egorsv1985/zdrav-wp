@@ -6,8 +6,7 @@ $items_count = count(WC()->cart->get_cart());
 <?php 
   wp_enqueue_style( 'fancybox', get_template_directory_uri() . '/fancybox/jquery.fancybox.css' );
   wp_enqueue_script('fancybox-js', get_template_directory_uri() . '/fancybox/jquery.fancybox.js', array('jquery'), null, true);
-
- ?>
+?>
 
 
 
@@ -19,7 +18,8 @@ $items_count = count(WC()->cart->get_cart());
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title><?php echo wp_get_document_title() ?></title>
+
 
   <?php wp_head(); ?>
 </head>

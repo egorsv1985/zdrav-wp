@@ -16,20 +16,14 @@ Template Name: Интересное
       }
       ?>
     </div>
-    <div class="row">
-      <div class="col-lg-12">
-        <h1><?php the_title(); ?></h1>
-      </div>
-    </div>
+    
 
 
-    <div class="row">
-      <ul>
         <?php
         $args = array(
           'post_type' => 'post',
           'posts_per_page' => -1,
-          // 'cat' => 20
+          'cat' => 1
           // 'orderby'        => 'rand'
         );
         $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
@@ -40,11 +34,23 @@ Template Name: Интересное
         ?>
 
 
-          <li class="col-lg-4">
-            <a href="<?php the_permalink(); ?>">
-              <?php the_title(); ?>
-            </a>
-          </li>
+        <div class="row row1">
+          <div class="col-lg-12">
+            <div class="item-block">
+              <div class="img-block" style="background-image: url(<?php the_post_thumbnail_url( 'full' ); ?>);">
+              </div>
+
+              <div class="text-block">
+                <h2><?php the_title(); ?></h2>
+
+                <?php the_excerpt(); ?>
+
+                <a href="<?php the_permalink(); ?>" class="read-more">Читать</a>
+              </div>
+            </div>      
+          </div>
+        </div>
+          
 
 
 
@@ -56,8 +62,8 @@ Template Name: Интересное
         wp_reset_postdata();
 
         ?>
-      </ul>
-    </div>
+
+
   </div>
 </section>
 

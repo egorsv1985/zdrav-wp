@@ -30,6 +30,7 @@
 
           <li class="col-lg-4">
               <a href="<?php the_permalink(); ?>">
+                <span class="img-block" style="background-image: url(<?php the_post_thumbnail_url( 'full' ); ?>);"></span>
 	              <img src="<?php the_post_thumbnail_url( 'full' ); ?>" alt=""> 
 	            	<?php the_title(); ?>
 

@@ -39,26 +39,40 @@ if ( is_search() ) { ?>
 <!--== Start Shop Page Wrapper ==-->
 <div id="shop-page-wrapper" class="">
     <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="path">
+            <?php
+              if (function_exists('yoast_breadcrumb')) {
+                yoast_breadcrumb('<p id="breadcrumbs">', '</p>');
+              }
+            ?>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+           <h1><?php the_title(); ?></h1>
+        </div>
+      </div>
         <div class="row">
 
 
-        	<div class="col-lg-2 filter-column">
+        	<!-- <div class="col-lg-2 filter-column">
 				    
 
 				   <?php dynamic_sidebar( 'shop_left_sideber' ); ?>
 
 
 
-        	</div>
+        	</div> -->
         	
 
 
 
             <!-- Start Shop Page Product Area -->
-            <div class="col-lg-10">
 
-              <h1><?php the_title(); ?></h1>
-
+             
 
 							<?php if ( woocommerce_product_loop() ) { ?>
                 
@@ -84,6 +98,9 @@ if ( is_search() ) { ?>
 							}
 
 							?>
+        </div>
+
+        <div class="row">
 
               <div class="page-pagination-wrapper">
               	<?php do_action( 'woocommerce_after_shop_loop' ); ?>
@@ -93,7 +110,6 @@ if ( is_search() ) { ?>
 
 
 
-            </div>
             <!-- End Shop Page Product Area -->
         </div>
     </div>

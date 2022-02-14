@@ -31,17 +31,24 @@ $product_published = $product->get_date_created(); // $product_published->date
 
 <div class="how-it-work__item">
   <div class="item__box-img">
+    <?php 
+      $product_image_id = $product->get_image_id();
+      $image_main = wp_get_attachment_image_url($product_image_id, 'full') 
+    ?>
+    <div class="img-block" style="background-image: url(<?php echo $image_main; ?>);"></div>
   	<!-- <?php echo $product->get_image() ?> -->
-  	<?php 
+<!--   	<?php 
 			do_action( 'woocommerce_before_shop_loop_item_title' );
-		?>
+		?> -->
   </div>            
   <div class="item-info">
     <h3 class="item-title"><?php echo $product->get_title() ?></h3>
-    <p class="item-description"><?php echo $product->get_short_description() ?></p>
+    <div class="item-description">
+      <?php echo $product->get_short_description() ?>
+    </div>
     <span class="item-price"><?php echo $product->get_price_html() ?></span>
     <div class="item-btn-group">
-      <a href="<?php echo $product->get_permalink() ?>" class="buy">Купить сейчас</a>
+      <a href="<?php echo $product->get_permalink() ?>" class="buy-flex">Купить сейчас</a>
       <a class="hero__btn-link" href="<?php echo $product->get_permalink() ?>">
         <span class="hero__more">Подробнее</span>
         <div class="hero__more-arrow"></div>

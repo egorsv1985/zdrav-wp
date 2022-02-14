@@ -53,7 +53,12 @@ $image_url = wp_get_attachment_image_url($product_image_id, 'full');
   </div>
 
   <div class="container">
-    <div class="row">
+    <div class="row row--mobile">
+
+  
+
+      <h2 class="product__title product__title--mobile d-none"><?php the_title(); ?></h2>
+
       <div class="product__wrap">
         <div class="product-thumb-carousel vertical-tab">
           <div>
@@ -100,7 +105,7 @@ $image_url = wp_get_attachment_image_url($product_image_id, 'full');
         </div>
 
         <p class="product__description">
-          <?php echo $product->get_short_description() ?>
+          <?php echo $product->get_description() ?>
         </p>
 
         <div class="bottom_header">
@@ -162,27 +167,33 @@ $image_url = wp_get_attachment_image_url($product_image_id, 'full');
       <img src="<?php echo get_template_directory_uri(); ?>/assets/img/item/hands.png" alt="">
     </div>
     <div class="effect__list">
+       <?php
+        // check if the repeater field has rows of data
+        if( have_rows('opisanie_spiskom') ):
+          // loop through the rows of data
+            while ( have_rows('opisanie_spiskom') ) : the_row(); ?>
+      
+              
       <div class="effect__item">
-        <h3 class="effect__text"><?php the_field('underline-text-1'); ?></h3>
+        <h3 class="effect__text"><?php echo the_sub_field('tekst') ?></h3>
         <div class="effect__line">
           <img src="<?php echo get_template_directory_uri(); ?>/assets/img/item/effect-line.svg" alt="">
         </div>
       </div>
-      <div class="effect__item">
-        <h3 class="effect__text"><?php the_field('underline-text-2'); ?></h3>
-        <div class="effect__line">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/item/effect-line.svg" alt="">
-        </div>
-      </div>
-      <div class="effect__item">
-        <h3 class="effect__text"><?php the_field('underline-text-3'); ?></h3>
-        <div class="effect__line">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/item/effect-line.svg" alt="">
-        </div>
-      </div>
-      <p class="effect__afterlist"><?php the_field('strong-underline-text'); ?></p>
+      
+      
+            <?php endwhile;
+        else :
+            // no rows found
+        endif;
+      ?>
+      
+      <p class="effect__afterlist"><?php the_field('tekst_pod_spiskom'); ?></p>
+
       <button class="effect__btn">Получить онлайн консультацию</button>
     </div>
+
+    <div class="w355"></div>
   </div>
 </section>
 
@@ -215,7 +226,7 @@ $image_url = wp_get_attachment_image_url($product_image_id, 'full');
       if ($upsells) {
         $related_products = $upsells;
       } else {
-        $related_products = wc_get_related_products($product->get_id(), 16);
+        $related_products = wc_get_related_products($product->get_id(), 5);
       }
 
       ?>

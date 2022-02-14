@@ -1,4 +1,4 @@
-<?php get_header('page');?>
+<?php get_header();?>
   <div class="container">
     <div class="path">
       <a href="<?php echo home_url();?>">Главная</a>
@@ -74,4 +74,4 @@
       </div>
     </div>
   </div>
-  <?php get_footer('page');?>
+  <?php get_footer();?>

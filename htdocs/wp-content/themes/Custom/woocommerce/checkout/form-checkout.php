@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 ?><div id="checkout-page-wrapper" class="pt-90 pt-md-60 pt-sm-50 pb-50 pb-md-20 pb-sm-10">
-    <div class="container"><?php
+    <div class="container-fluid"><?php
 
 
 do_action( 'woocommerce_before_checkout_form', $checkout );

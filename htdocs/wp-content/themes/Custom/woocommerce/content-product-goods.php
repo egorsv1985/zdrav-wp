@@ -32,22 +32,34 @@ $product_published = $product->get_date_created(); // $product_published->date
 
 
 
-<section class="how-it-work__item">
-  <div class="item__box-img">
-    <?php echo $product->get_image() ?>
-  </div>
+<div class="how-it-work__item">
+  <?php 
+    $product_image_id = $product->get_image_id();
+    $image_main = wp_get_attachment_image_url($product_image_id, 'full') 
+  ?>
+  <div class="img-block" style="background-image: url(<?php echo $image_main; ?>);"></div>
   <div class="item-info">
     <h3 class="item-title"><?php echo $product->get_title() ?></h3>
     <span class="item-price"><?php echo $product->get_price_html() ?></span>
+
+
+    <a href="<?php echo $product->get_permalink() ?>" class="more">Подробнее</a>
     <div class="item-btn-group">
-      <a href="<?php echo $product->get_permalink() ?>" class="buy">Купить сейчас</a>
-      <a class="hero__btn-link" href="<?php echo $product->get_permalink() ?>">
-        <span class="hero__more">Подробнее</span>
-        <div class="hero__more-arrow"></div>
-      </a>
+
+      <?php echo apply_filters( 'woocommerce_loop_add_to_cart_link',
+    sprintf( '<a href="%s" rel="nofollow" data-product_id="%s" data-product_sku="%s" class="buy %s product_type_%s">%s</a>',
+        esc_url( $product->add_to_cart_url() ),
+        esc_attr( $product->get_id() ),
+        esc_attr( $product->get_sku() ),
+        $product->is_purchasable() ? 'add_to_cart_button' : '',
+        esc_attr( $product->get_type() ),
+        esc_html( $product->add_to_cart_text() )
+    ),
+$product ); ?>
+      
     </div>
   </div>
-</section>
+</div>
 
 
 

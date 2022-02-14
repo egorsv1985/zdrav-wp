@@ -22,4 +22,4 @@ if ( ! defined( 'ABSPATH' ) ) {
 <!-- Start Product Wrapper -->
 <div class="shop-page-products-wrapper mt-44 mt-sm-30">
 		<div class="products-wrapper products-on-column">
-				<div class="row">
+				<div class="row row1">

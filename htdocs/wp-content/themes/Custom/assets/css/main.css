@@ -6,6 +6,13 @@
 }
 
 @font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-Regular.woff2") format("woff2"), url("../fonts/Gilroy-Regular.woff") format("woff");
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "Gilroy Bold";
   src: url("../fonts/Gilroy-Bold.woff2") format("woff2"), url("../fonts/Gilroy-Bold.woff") format("woff");
   font-display: swap;
@@ -179,13 +186,13 @@ input:focus-visible {
   margin-bottom: 30px;
 }
 
-#single-product-page .product-thumb-carousel img {
+/*#single-product-page .product-thumb-carousel img {
   display: block;
   width: 360px;
   height: 464px;
   border-radius: 5px;
 
-}
+}*/
 
 .product__wrap {
   margin-right: 40px;
@@ -289,15 +296,18 @@ input:focus-visible {
   line-height: 150%;
   /* or 24px */
   color: #A0FEB5;
-  margin: 10px 0 47px;
+  margin: 10px 0 50px;
 }
 
+.woocommerce div.product form.cart {
+  margin-bottom: 65px !important;
+}
 
 .path a,
 .woo-breads a {
   color: #fff;
   position: relative;
-  margin-right: 20px;
+  margin-right: 5px;
 }
 
 .path a::after,
@@ -305,9 +315,8 @@ input:focus-visible {
   display: block;
   content: '>';
   position: absolute;
-  top: 0;
-  right: -15px;
-
+  top: -1px;
+  right: -10px;
 }
 
 .cart__title {
@@ -389,11 +398,11 @@ input:focus-visible {
   flex-direction: column;
 }
 
-.woocommerce-cart-form__cart-item:last-child {
+/*.woocommerce-cart-form__cart-item:last-child {
   display: flex;
   align-items: center;
   height: 95px;
-}
+}*/
 
 #add_payment_method .wc-proceed-to-checkout a.checkout-button,
 .woocommerce-cart .wc-proceed-to-checkout a.checkout-button,
@@ -588,7 +597,7 @@ body.single-product .qib-button.qib-button-wrapper {
   display: block;
   width: 700px;
   height: 268px;
-  background: url(assets/img/decor3.png) top center no-repeat;
+  background: url(../img/decor3.png) top center no-repeat;
   background-size: contain;
   position: absolute;
   z-index: 1;
@@ -614,7 +623,7 @@ body.single-product .qib-button.qib-button-wrapper {
   position: absolute;
   bottom: -396px;
   right: 0;
-  background: url(assets/img/decor4.png) right center no-repeat;
+  background: url(../img/decor4.png) right center no-repeat;
   background-size: contain;
 }
 
@@ -679,11 +688,7 @@ body.single-product .qib-button.qib-button-wrapper {
 }
 
 
-#single-product-page .product__wrap {
-  width: 40%;
-  min-width: 40%;
-  max-width: 40%;
-}
+
 
 #single-product-page .slider-bottom img {
   max-width: 90%;
@@ -754,7 +759,7 @@ li.menu-item-has-children:before {
 
   left: 0;
   top: -65px;
-  /* background: linear-gradient(180deg, #b6fbff 0%, #83a4d4 100%); */
+   background: linear-gradient(180deg, #b6fbff 0%, #83a4d4 100%); 
   border-radius: 5px;
   width: 153px;
   height: 217px;
@@ -1228,11 +1233,11 @@ header.header.scrolled {
 .about__image-upper img,
 .about__image-upper source {
 
-  -webkit-filter: drop-shadow(0px 0px 30px rgba(54, 69, 120, 0.3));
-  filter: drop-shadow(0px 0px 30px rgba(54, 69, 120, 0.3));
-  width: 260px;
-  height: 150px;
-  position: absolute;
+  /*-webkit-filter: drop-shadow(0px 0px 30px rgba(54, 69, 120, 0.3));*/
+  /*filter: drop-shadow(0px 0px 30px rgba(54, 69, 120, 0.3));*/
+  /*width: 260px;*/
+  /*height: 150px;*/
+  /*position: absolute;*/
   bottom: 55%;
   right: 0;
 }
@@ -1933,12 +1938,69 @@ header.header.scrolled {
 
 }
 
+.single-product {
+  margin: 0;
+}
+
 .woocommerce-thankyou-order-received {
   margin-bottom: 20px;
 }
 
+.product__wrapper p {
+  font-family: "Gilroy Regular";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+
+  color: #FFFFFF;
+
+  margin-bottom: 26px;
+  max-width: 580px;
+}
+
+
+.bottom_header {
+  font-family: "Gilroy Bold";
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 130%;
+
+  color: #FFFFFF;
+  max-width: 580px;
+
+}
+
+.about__upper-text p {
+  font-family: "Gilroy Regular";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+
+  color: #FFFFFF;
+}
+
+.about__lower p {
+  font-family: "Gilroy Regular";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  color: #364578;
+
+}
+
 .woocommerce ul.order_details li strong {
   margin-top: 10px;
+}
+
+.section-title-wrap h2 {
+  font-family: "Gilroy SemiBold";
+
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 110%;
+
+  color: #FFFFFF;
+
 }
 
 .select2-container--default .select2-selection--single {
@@ -2196,6 +2258,8 @@ form textarea {
 
   color: #FFFFFF;
 
+  margin-bottom: 60px;
+
 }
 
 .effect__text {
@@ -2300,7 +2364,25 @@ form textarea {
   display: none;
 }
 
+.product__title {
+  display: none;
 
+}
+
+.product__title--mobile {
+  display: block;
+  font-family: "Gilroy Medium";
+  font-size: 26px;
+  line-height: 150%;
+  font-weight: 600;
+
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.row--mobile {
+  flex-direction: column;
+}
 
 @media (min-width: 600px) {
   .about__upper-text {
@@ -2492,8 +2574,8 @@ form textarea {
 
   .about__image-upper img,
   .about__image-upper source {
-    width: 370px;
-    height: 210px;
+    /*width: 370px;*/
+    /*height: 210px;*/
 
     right: 0;
     bottom: 32%;
@@ -2888,7 +2970,7 @@ form textarea {
 
   .btn-modal {
     max-width: 360px;
-    padding: 0 44px;
+    padding: 0px;
     margin: 0 auto;
   }
 
@@ -3021,8 +3103,8 @@ form textarea {
 
   .about__image-upper img,
   .about__image-upper source {
-    width: 575px;
-    height: 335px;
+    /*width: 575px;*/
+    /*height: 335px;*/
     bottom: 24%;
   }
 
@@ -3325,6 +3407,23 @@ form textarea {
 
 @media (min-width: 1350px) {
 
+  .path a,
+  .woo-breads a {
+    color: #fff;
+    position: relative;
+    margin-right: 20px;
+  }
+
+  .path a::after,
+  .woo-breads a:after {
+    display: block;
+    content: '>';
+    position: absolute;
+    top: 0;
+    right: -15px;
+
+  }
+
   .wrapper {
     /* background: linear-gradient(54.73deg, rgba(99, 99, 187, 0.8) -4.33%, rgba(62, 105, 183, 0.8) 47.39%, rgba(90, 168, 173, 0.8) 90.71%) !important; */
     position: relative;
@@ -3338,7 +3437,7 @@ form textarea {
     position: absolute;
     left: 43px;
     bottom: 0;
-    background: url(assets/img/decor2.png) center center no-repeat;
+    background: url(../img/decor2.png) center center no-repeat;
     background-size: contain;
   }
 
@@ -3361,7 +3460,7 @@ form textarea {
     display: block;
     width: 439px;
     height: 564px;
-    background: url(assets/img/decor1.png) center center no-repeat;
+    background: url(../img/decor1.png) center center no-repeat;
     background-size: contain;
     position: absolute;
     z-index: 49;
@@ -3388,9 +3487,10 @@ form textarea {
   .hands img {}
 
   .hands svg {
-
+    position: absolute;
     top: 306px;
     right: -368px;
+    z-index: 55
   }
 
 
@@ -3458,10 +3558,21 @@ form textarea {
     color: #fff;
   }
 
-  .header__menu li:first-child a {
+  .header__menu li.current-menu-item a {
     color: #A0FEB5;
   }
-
+  .header__menu li.current-menu-item#menu-item-100 a {
+    color:  white!important;
+  }
+  .header__menu li.current-menu-item#menu-item-11 a {
+    color:  white!important;
+  }
+  .single-product .header__menu li#menu-item-11 > a {
+    color: #A0FEB5!important;
+  }
+  .sub-menu .current-menu-item a {
+    color: #A0FEB5!important;
+  }
   .header__cart {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -3509,7 +3620,7 @@ form textarea {
     content: '';
     position: absolute;
     top: 88px;
-    right: 0;
+    right: -20px;
     width: 484px;
     height: 564px;
     background-image: url(../img/ring-hero.png);
@@ -3518,7 +3629,7 @@ form textarea {
 
   .hero__grid {
     display: grid;
-    grid-template-columns: 500px 1fr;
+    grid-template-columns: 400px 1fr;
     grid-template-rows: 76px 1fr;
   }
 
@@ -3627,7 +3738,7 @@ form textarea {
   }
 
   .about__page-foods {
-    padding-top: 70px;
+    padding-top: 110px;
   }
 
   .about__ring {
@@ -3693,8 +3804,8 @@ form textarea {
 
   .about__image-upper img,
   .about__image-upper source {
-    width: 645px;
-    height: 346px;
+    /*width: 645px;*/
+    /*height: 346px;*/
     bottom: 19%;
     right: 0;
 
@@ -4443,7 +4554,7 @@ form textarea {
   }
 
   .effect {
-    padding-top: 76px;
+    padding-top: 10px;
   }
 
   .effect__image img {

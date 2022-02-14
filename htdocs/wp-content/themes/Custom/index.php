@@ -12,6 +12,7 @@ Template Name: main page
 } ?>
 
 <div class="wrapper">
+  <div class="container1">
 
 
 
@@ -24,34 +25,36 @@ Template Name: main page
   </div>
 
   <section class="hero">
-    <div class="hero__grid">
-      <div class="hero__up-box"></div>
-      <div class="hero__box"></div>
-      <div class="hero__wrap">
+    <div class="container">
+      <div class="hero__grid">
+        <div class="hero__up-box"></div>
+        <div class="hero__box"></div>
+        <div class="hero__wrap">
 
 
-        <h1 class="hero__title">Как не болеть и сохранить здоровье для энергичной жизни</h1>
-        <h2 class="hero__subtitle">Применение устройства ЗДРАВ:</h2>
-        <ul class="hero__list">
-          <li class="hero__item">Продлевают ресурс организма человека на треть и более.</li>
-          <li class="hero__item">Защитищают от ГРИППа и COVIDа без противогаза и маски.</li>
-          <li class="hero__item">Противопоказаний нет.</li>
-          <li class="hero__item">Подходит всем.</li>
-        </ul>
-        <div class="hero__btn-group">
-          <a class="btn-modal" data-fancybox data-src="#hidden-content" href="javascript:;">
-            Получить онлайн консультацию
-          </a>
+          <h1 class="hero__title">Как не болеть и сохранить здоровье для энергичной жизни</h1>
+          <h2 class="hero__subtitle">Применение устройства ЗДРАВ:</h2>
+          <ul class="hero__list">
+            <li class="hero__item">Продлевают ресурс организма человека на треть и более.</li>
+            <li class="hero__item">Защитищают от ГРИППа и COVIDа без противогаза и маски.</li>
+            <li class="hero__item">Противопоказаний нет.</li>
+            <li class="hero__item">Подходит всем.</li>
+          </ul>
+          <div class="hero__btn-group">
+            <a class="btn-modal" data-fancybox data-src="#hidden-content" href="javascript:;">
+              Получить онлайн консультацию
+            </a>
 
 
 
 
 
-          <!-- <a href="#callback"><button class="btn-modal">Получить онлайн консультацию</button></a> -->
-          <a class="hero__btn-link" href="#how-it-work">
-            <span class="hero__more">Все устройства</span>
-            <div class="hero__more-arrow"></div>
-          </a>
+            <!-- <a href="#callback"><button class="btn-modal">Получить онлайн консультацию</button></a> -->
+            <a class="hero__btn-link" href="#how-it-work">
+              <span class="hero__more">Все устройства</span>
+              <div class="hero__more-arrow"></div>
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -93,10 +96,7 @@ Template Name: main page
         </div>
         <div class="about__wrapper">
           <div class="about__image-upper">
-            <picture>
-              <source srcset="<?php echo get_template_directory_uri(); ?>/assets/img/upper-image.webp" type="image/webp" alt="upper-image">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/upper-image.png" alt="upper-image" />
-            </picture>
+            <img src="https://domainfortest.space/wp-content/uploads/2022/02/img_20211227_123537-2.png" alt="">
           </div>
           <p class="about__description">Изделие сделано по уникальной технологии из экологичных материалов. Является
             сильным помощником для естественного укрепления иммунитета человека. В основе наших разработок лежит
@@ -109,7 +109,7 @@ Template Name: main page
       </div>
     </div>
   </section>
-
+  </div>
 </div>
 
 
@@ -297,15 +297,27 @@ Template Name: main page
       if (have_rows('voprosy')) :
         // loop through the rows of data
         while (have_rows('voprosy')) : the_row(); ?>
-          <div class="questions__item">
-            <div class="questions__toggle" id="toggle-<?php the_ID(); ?>">
-              <span class="questions__toggle-hor"></span>
-              <span class="questions__toggle-ver"></span>
+
+        
+          <div class="item close1">
+            <div class="item__name">
+              <span><?php echo the_sub_field('zagolovok') ?></span>
+              <div class="img">
+                <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <line x1="0.606445" y1="14.5825" x2="30.6064" y2="14.5825" stroke="#A0FEB5"/>
+                  <line x1="16.3198" y1="30.1538" x2="16.3198" y2="0.153809" stroke="#A0FEB5"/>
+                </svg>
+
+              </div>
             </div>
-            <h3 class="item-title"><?php echo the_sub_field('zagolovok') ?></h3>
-            <p class="item-text"><?php echo the_sub_field('tekst') ?></p>
+
+            <div class="item__desc">
+              <?php echo the_sub_field('tekst') ?>
+            </div>
           </div>
 
+
+       
 
       <?php endwhile;
       else :

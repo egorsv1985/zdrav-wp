@@ -38,8 +38,15 @@ defined('ABSPATH') || exit;
 <!--== Start Cart Page Wrapper ==-->
 <div id="cart-page-wrapper" class="cart__wrapper">
 	<div class="row">
+		<div class="col-lg-12">
+			<div class="notice-block">
+				<?php do_action('woocommerce_before_cart'); ?>
+			</div>
+		</div>
+	</div>
+	<div class="row">
 		<div class="col-lg-8">
-			<?php do_action('woocommerce_before_cart'); ?>
+			
 			<div class="shopping-cart-list-area">
 
 				<form class="woocommerce-cart-form" action="<?php echo esc_url(wc_get_cart_url()); ?>" method="post">
@@ -69,7 +76,7 @@ defined('ABSPATH') || exit;
 
 										<tr class="woocommerce-cart-form__cart-item cart_item">
 											<td class="product-list">
-												<div class="cart-product-item d-flex align-items-center">
+												<div class="cart-product-item ">
 
 
 
@@ -83,53 +90,131 @@ defined('ABSPATH') || exit;
 													}
 													?>
 
-													<?php
-													if (!$product_permalink) {
-														echo wp_kses_post(apply_filters('woocommerce_cart_item_name', $_product->get_name(), $cart_item, $cart_item_key) . '&nbsp;');
-													} else {
-														echo wp_kses_post(apply_filters('woocommerce_cart_item_name', sprintf('<a href="%s" class="product-name">%s</a>', esc_url($product_permalink), $_product->get_name()), $cart_item, $cart_item_key));
-													}
-													?>
-												</div>
-											</td>
-											<td>
-												<span class="price"><?php echo WC()->cart->get_product_price($_product) ?></span>
-											</td>
-											<td class="product-quantity">
-												<?php
-												if ($_product->is_sold_individually()) {
-													$product_quantity = sprintf('1 <input type="hidden" name="cart[%s][qty]" value="1" />', $cart_item_key);
-												} else {
-													$product_quantity = woocommerce_quantity_input(
-														array(
-															'input_name'   => "cart[{$cart_item_key}][qty]",
-															'input_value'  => $cart_item['quantity'],
-															'max_value'    => $_product->get_max_purchase_quantity(),
-															'min_value'    => '0',
-															'product_name' => $_product->get_name(),
-														),
-														$_product,
-														false
-													);
-												}
-												echo 	$product_quantity;
-												?>
-											</td>
-											<td>
-												<span class="price"><?php echo WC()->cart->get_product_subtotal($_product, $cart_item['quantity']) ?></span>
 
-												<div class="remove-icon product-remove">
-													<?php
-													echo sprintf(
-														'<a href="%s" class="remove" aria-label="%s" data-product_id="%s" data-product_sku="%s">X</a>',
-														esc_url(wc_get_cart_remove_url($cart_item_key)),
-														esc_html__('Remove this item', 'woocommerce'),
-														esc_attr($product_id),
-														esc_attr($_product->get_sku())
-													);
-													?>
+
+													<?php if ( wp_is_mobile() ) : ?>
+												    <div class="text-right-block">
+															<?php
+																if (!$product_permalink) {
+																	echo wp_kses_post(apply_filters('woocommerce_cart_item_name', $_product->get_name(), $cart_item, $cart_item_key) . '&nbsp;');
+																} else {
+																	echo wp_kses_post(apply_filters('woocommerce_cart_item_name', sprintf('<a href="%s" class="product-name">%s</a>', esc_url($product_permalink), $_product->get_name()), $cart_item, $cart_item_key));
+																}
+																?>
+
+
+																<div class="d-flex">
+																	<div class="price"><?php echo WC()->cart->get_product_price($_product) ?></div>
+
+																	<div class="product-quantity">
+																		<?php
+																		if ($_product->is_sold_individually()) {
+																			$product_quantity = sprintf('1 <input type="hidden" name="cart[%s][qty]" value="1" />', $cart_item_key);
+																		} else {
+																			$product_quantity = woocommerce_quantity_input(
+																				array(
+																					'input_name'   => "cart[{$cart_item_key}][qty]",
+																					'input_value'  => $cart_item['quantity'],
+																					'max_value'    => $_product->get_max_purchase_quantity(),
+																					'min_value'    => '0',
+																					'product_name' => $_product->get_name(),
+																				),
+																				$_product,
+																				false
+																			);
+																		}
+																		echo 	$product_quantity;
+																		?>
+																	</div>
+																		
+																</div>
+
+																<div class="remove-icon product-remove">
+																	<?php
+																	echo sprintf(
+																		'<a href="%s" class="remove" aria-label="%s" data-product_id="%s" data-product_sku="%s">X</a>',
+																		esc_url(wc_get_cart_remove_url($cart_item_key)),
+																		esc_html__('Remove this item', 'woocommerce'),
+																		esc_attr($product_id),
+																		esc_attr($_product->get_sku())
+																	);
+																	?>
+																</div>
+
+																
+														</div>
+													<?php else : ?>
+												    <?php
+															if (!$product_permalink) {
+																echo wp_kses_post(apply_filters('woocommerce_cart_item_name', $_product->get_name(), $cart_item, $cart_item_key) . '&nbsp;');
+															} else {
+																echo wp_kses_post(apply_filters('woocommerce_cart_item_name', sprintf('<a href="%s" class="product-name">%s</a>', esc_url($product_permalink), $_product->get_name()), $cart_item, $cart_item_key));
+															}
+														?>
+													<?php endif; ?>
+
+
+
+													
+
+													
+
+													
 												</div>
 											</td>
+
+
+
+											<?php if ( wp_is_mobile() ) : ?>
+
+											<?php else : ?>
+												<td>
+													<span class="price"><?php echo WC()->cart->get_product_price($_product) ?></span>
+												</td>
+
+												<td class="product-quantity">
+													<?php
+													if ($_product->is_sold_individually()) {
+														$product_quantity = sprintf('1 <input type="hidden" name="cart[%s][qty]" value="1" />', $cart_item_key);
+													} else {
+														$product_quantity = woocommerce_quantity_input(
+															array(
+																'input_name'   => "cart[{$cart_item_key}][qty]",
+																'input_value'  => $cart_item['quantity'],
+																'max_value'    => $_product->get_max_purchase_quantity(),
+																'min_value'    => '0',
+																'product_name' => $_product->get_name(),
+															),
+															$_product,
+															false
+														);
+													}
+													echo 	$product_quantity;
+													?>
+												</td>
+
+
+
+												<td>
+													<div class="d-flex">
+														<span class="price"><?php echo WC()->cart->get_product_subtotal($_product, $cart_item['quantity']) ?></span>
+
+														<div class="remove-icon product-remove">
+															<?php
+															echo sprintf(
+																'<a href="%s" class="remove" aria-label="%s" data-product_id="%s" data-product_sku="%s">X</a>',
+																esc_url(wc_get_cart_remove_url($cart_item_key)),
+																esc_html__('Remove this item', 'woocommerce'),
+																esc_attr($product_id),
+																esc_attr($_product->get_sku())
+															);
+															?>
+														</div>
+													</div>
+												</td>
+											<?php endif; ?>
+											
+											
 										</tr>
 
 								<?php }
@@ -148,7 +233,7 @@ defined('ABSPATH') || exit;
 							<div class="coupon-form-wrap">
 
 								<input type="text" autocomplete="off" name="coupon_code" id="coupon_code" placeholder="Код купона" />
-								<button type="submit" class="btn-apply" name="apply_coupon">Применить купон</button>
+								<button type="submit" id="btn_apply_coupon" name="apply_coupon" style="display: none;">Применить купон</button>
 
 							</div>
 						<?php endif; ?>

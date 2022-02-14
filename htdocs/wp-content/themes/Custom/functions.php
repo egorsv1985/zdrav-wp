@@ -154,18 +154,18 @@ function my_theme_cart_button_text()
 add_filter('woocommerce_product_single_add_to_cart_text', 'my_theme_cart_button_text');
 
 
-// Add Fancybox in footer
-function add_fancybox()
-{
-    if (is_singular()) {
-        echo "<script src=\"https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js\"></script>";
+// // Add Fancybox in footer
+// function add_fancybox()
+// {
+//     if (is_singular()) {
+//         echo "<script src=\"https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js\"></script>";
 
-        echo '<script type="text/javascript">
-                 $(document).ready(function(){
-                     $(".wp-block-image").find("a:has(img)").addClass(\'fancyboxImg\');
-                     $("a.fancyboxImg").fancybox({\'transitionIn\':\'elastic\',\'transitionOut\':\'elastic\',\'speedIn\':600,\'speedOut\':200,\'overlayShow\':false});
-                 });
-             </script>';
-    }
-}
-add_action('wp_footer', 'add_fancybox');
+//         echo '<script type="text/javascript">
+//                  $(document).ready(function(){
+//                      $(".wp-block-image").find("a:has(img)").addClass(\'fancyboxImg\');
+//                      $("a.fancyboxImg").fancybox({\'transitionIn\':\'elastic\',\'transitionOut\':\'elastic\',\'speedIn\':600,\'speedOut\':200,\'overlayShow\':false});
+//                  });
+//              </script>';
+//     }
+// }
+// add_action('wp_footer', 'add_fancybox');

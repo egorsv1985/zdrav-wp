@@ -17,7 +17,63 @@ jQuery(function ($) {
 
   });
 
+  if ($(window).width() < 1023) {
+    $('#related-products-wrapper .products-on-column').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: true,
+      dots: false,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            infinite: true,
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+        // You can unslick at a given breakpoint now by adding:
+        // settings: "unslick"
+        // instead of a settings object
+      ]
 
+    });
+  }
+  else {
+
+  }
+
+  $(document).on('click', '.questions__list .close1 .item__name', function(){
+    $('.questions__list .open .item__desc').slideUp();
+    $('.questions__list .item').removeClass('open');
+    $('.questions__list .item').addClass('close1');
+    $(this).next().slideToggle();
+    $(this).parent('.questions__list .item').removeClass('close1');
+    $(this).parent('.questions__list .item').addClass('open');
+  });
+
+  $(document).on('click', '.questions__list .open .item__name', function(){
+    $('.questions__list .open .item__desc').slideUp();
+    $('.questions__list .item').removeClass('open');
+    $('.questions__list .item').addClass('close1');
+    // $(this).next().slideToggle();
+    $(this).parent('.questions__list .item').addClass('close1');
+    $(this).parent('.questions__list .item').removeClass('open');
+  });
 
 
   $('.header__burger').on('click', function () {
@@ -50,12 +106,21 @@ jQuery(function ($) {
 
   var header = $(".header");
 
-  $(window).scroll(function () {
-    var scroll = $(window).scrollTop();
-    if (scroll >= 300) {
-      header.addClass("scrolled");
-    } else {
-      header.removeClass("scrolled");
+  $(window).scroll(function() {    
+      var scroll = $(window).scrollTop();
+      if (scroll >= 500) {
+          header.addClass("scrolled");
+      } else {
+          header.removeClass("scrolled");
+      }
+  });
+
+
+
+  document.getElementById("coupon_code").addEventListener("keyup", function(event) {
+    if (event.keyCode === 13) {
+      document.getElementById("btn_apply_coupon").click();
+      return false;
     }
   });
 
