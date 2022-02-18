@@ -55,7 +55,7 @@ $image_url = wp_get_attachment_image_url($product_image_id, 'full');
   <div class="container">
     <div class="row row--mobile">
 
-  
+
 
       <h2 class="product__title product__title--mobile d-none"><?php the_title(); ?></h2>
 
@@ -161,39 +161,41 @@ $image_url = wp_get_attachment_image_url($product_image_id, 'full');
 </section>
 
 <section class="effect">
-  <h2 class="effect__title">Какое воздействие оказывает</h2>
-  <div class="effect__info">
-    <div class="effect__image">
-      <img src="<?php echo get_template_directory_uri(); ?>/assets/img/item/hands.png" alt="">
-    </div>
-    <div class="effect__list">
-       <?php
-        // check if the repeater field has rows of data
-        if( have_rows('opisanie_spiskom') ):
-          // loop through the rows of data
-            while ( have_rows('opisanie_spiskom') ) : the_row(); ?>
-      
-              
-      <div class="effect__item">
-        <h3 class="effect__text"><?php echo the_sub_field('tekst') ?></h3>
-        <div class="effect__line">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/item/effect-line.svg" alt="">
-        </div>
+  <div class="container">
+    <h2 class="effect__title">Какое воздействие оказывает</h2>
+    <div class="effect__info">
+      <div class="effect__image">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/item/hands.png" alt="">
       </div>
-      
-      
-            <?php endwhile;
+      <div class="effect__list">
+        <?php
+        // check if the repeater field has rows of data
+        if (have_rows('opisanie_spiskom')) :
+          // loop through the rows of data
+          while (have_rows('opisanie_spiskom')) : the_row(); ?>
+
+
+            <div class="effect__item">
+              <h3 class="effect__text"><?php echo the_sub_field('tekst') ?></h3>
+              <div class="effect__line">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/item/effect-line.svg" alt="">
+              </div>
+            </div>
+
+
+        <?php endwhile;
         else :
-            // no rows found
+        // no rows found
         endif;
-      ?>
-      
-      <p class="effect__afterlist"><?php the_field('tekst_pod_spiskom'); ?></p>
+        ?>
 
-      <button class="effect__btn">Получить онлайн консультацию</button>
+        <p class="effect__afterlist"><?php the_field('tekst_pod_spiskom'); ?></p>
+
+        <button class="effect__btn">Получить онлайн консультацию</button>
+      </div>
+
+      <div class="w355"></div>
     </div>
-
-    <div class="w355"></div>
   </div>
 </section>
 

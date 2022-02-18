@@ -16,99 +16,99 @@ Template Name: main page
 
 
 
-  <div class="hands">
-    <img src="<?php bloginfo('template_url'); ?>/assets/img/hands2.png" srcset="<?php bloginfo('template_url'); ?>/assets/img/hands2@2x.png 2x" alt="">
-    <svg class="" width="435" height="53" viewBox="0 0 435 53" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="5.5" cy="47.5" r="5.5" fill="#C0FBFF" />
-      <path d="M8.5 47L165.042 1H435" stroke="#C0FBFF" />
-    </svg>
-  </div>
+    <div class="hands">
+      <img src="<?php bloginfo('template_url'); ?>/assets/img/hands2.png" srcset="<?php bloginfo('template_url'); ?>/assets/img/hands2@2x.png 2x" alt="">
+      <svg class="" width="435" height="53" viewBox="0 0 435 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="5.5" cy="47.5" r="5.5" fill="#C0FBFF" />
+        <path d="M8.5 47L165.042 1H435" stroke="#C0FBFF" />
+      </svg>
+    </div>
 
-  <section class="hero">
-    <div class="container">
-      <div class="hero__grid">
-        <div class="hero__up-box"></div>
-        <div class="hero__box"></div>
-        <div class="hero__wrap">
-
-
-          <h1 class="hero__title">Как не болеть и сохранить здоровье для энергичной жизни</h1>
-          <h2 class="hero__subtitle">Применение устройства ЗДРАВ:</h2>
-          <ul class="hero__list">
-            <li class="hero__item">Продлевают ресурс организма человека на треть и более.</li>
-            <li class="hero__item">Защитищают от ГРИППа и COVIDа без противогаза и маски.</li>
-            <li class="hero__item">Противопоказаний нет.</li>
-            <li class="hero__item">Подходит всем.</li>
-          </ul>
-          <div class="hero__btn-group">
-            <a class="btn-modal" data-fancybox data-src="#hidden-content" href="javascript:;">
-              Получить онлайн консультацию
-            </a>
+    <section class="hero">
+      <div class="container">
+        <div class="hero__grid">
+          <div class="hero__up-box"></div>
+          <div class="hero__box"></div>
+          <div class="hero__wrap">
 
 
+            <h1 class="hero__title">Как не болеть и сохранить здоровье для энергичной жизни</h1>
+            <h2 class="hero__subtitle">Применение устройства ЗДРАВ:</h2>
+            <ul class="hero__list">
+              <li class="hero__item">Продлевают ресурс организма человека на треть и более.</li>
+              <li class="hero__item">Защитищают от ГРИППа и COVIDа без противогаза и маски.</li>
+              <li class="hero__item">Противопоказаний нет.</li>
+              <li class="hero__item">Подходит всем.</li>
+            </ul>
+            <div class="hero__btn-group">
+              <a class="btn-modal" data-fancybox data-src="#hidden-content" href="javascript:;">
+                Получить онлайн консультацию
+              </a>
 
 
 
-            <!-- <a href="#callback"><button class="btn-modal">Получить онлайн консультацию</button></a> -->
-            <a class="hero__btn-link" href="#how-it-work">
-              <span class="hero__more">Все устройства</span>
-              <div class="hero__more-arrow"></div>
-            </a>
+
+
+              <!-- <a href="#callback"><button class="btn-modal">Получить онлайн консультацию</button></a> -->
+              <a class="hero__btn-link" href="#how-it-work">
+                <span class="hero__more">Все устройства</span>
+                <div class="hero__more-arrow"></div>
+              </a>
+            </div>
           </div>
         </div>
       </div>
+    </section>
+
+
+    <div style="display: none;" id="hidden-content">
+      <?php echo do_shortcode('[contact-form-7 id="284" title="Контактная форма"]') ?>
     </div>
-  </section>
 
-
-  <div style="display: none;" id="hidden-content">
-    <?php echo do_shortcode('[contact-form-7 id="284" title="Контактная форма"]') ?>
-  </div>
-
-  <ul class="side__contacts contacts">
-    <li class="contacts__item">
-      <a class="contacts__links" href="#">
-        <img class="contacts__img" src="<?php echo get_template_directory_uri(); ?>/assets/img/instagram.svg" alt="">
-      </a>
-    </li>
-    <li class="contacts__item">
-      <a class="contacts__links" href="#">
-        <img class="contacts__img" src="<?php echo get_template_directory_uri(); ?>/assets/img/telegram.svg" alt="">
-      </a>
-    </li>
-    <li class="contacts__item">
-      <a class="contacts__links" href="#">
-        <img class="contacts__img" src="<?php echo get_template_directory_uri(); ?>/assets/img/whatsapp.svg" alt="">
-      </a>
-    </li>
-  </ul>
+    <ul class="side__contacts contacts">
+      <li class="contacts__item">
+        <a class="contacts__links" href="https://www.instagram.com/s.adapter.by/">
+          <img class="contacts__img" src="<?php echo get_template_directory_uri(); ?>/assets/img/instagram.svg" alt="">
+        </a>
+      </li>
+      <li class="contacts__item">
+        <a class="contacts__links" href="https://t.me/RENaCoMSQ">
+          <img class="contacts__img" src="<?php echo get_template_directory_uri(); ?>/assets/img/telegram.svg" alt="">
+        </a>
+      </li>
+      <li class="contacts__item">
+        <a class="contacts__links" href="https://wapp.click/79033385876">
+          <img class="contacts__img" src="<?php echo get_template_directory_uri(); ?>/assets/img/whatsapp.svg" alt="">
+        </a>
+      </li>
+    </ul>
 
 
 
 
-  <section class="about">
-    <div class="container">
-      <div class="about__wrap">
-        <div class="about__upper-text">
-          <h2 class="about__title">Что такое устройство ЗДРАВ:</h2>
-          <p class="about__subtitle">Внешне простое изделие, влияющие на структуру материи, подстраивающее её, под
-            нужды любого человека самым оптимальным, для него образом.</p>
-        </div>
-        <div class="about__wrapper">
-          <div class="about__image-upper">
-            <img src="https://domainfortest.space/wp-content/uploads/2022/02/img_20211227_123537-2.png" alt="">
+    <section class="about">
+      <div class="container">
+        <div class="about__wrap">
+          <div class="about__upper-text">
+            <h2 class="about__title">Что такое устройство ЗДРАВ:</h2>
+            <p class="about__subtitle">Внешне простое изделие, влияющие на структуру материи, подстраивающее её, под
+              нужды любого человека самым оптимальным, для него образом.</p>
           </div>
-          <p class="about__description">Изделие сделано по уникальной технологии из экологичных материалов. Является
-            сильным помощником для естественного укрепления иммунитета человека. В основе наших разработок лежит
-            технология управляемого пси-поля, создаваемого для нормализации продуктов и защиты организма от разрушающих
-            факторов. Он работает не от батарейки, а на иных физико-полевых законах природы.</p>
-        </div>
-        <div class="about__lower">
-          <p class="about__lower-text">Это новая технология, у которой нет аналогов.</p>
+          <div class="about__wrapper">
+            <div class="about__image-upper">
+              <img src="http://srv92766.ht-test.ru/wp-content/uploads/2022/02/img_20211227_123537-1.png" alt="">
+            </div>
+            <p class="about__description">Изделие сделано по уникальной технологии из экологичных материалов. Является
+              сильным помощником для естественного укрепления иммунитета человека. В основе наших разработок лежит
+              технология управляемого пси-поля, создаваемого для нормализации продуктов и защиты организма от разрушающих
+              факторов. Он работает не от батарейки, а на иных физико-полевых законах природы.</p>
+          </div>
+          <div class="about__lower">
+            <p class="about__lower-text">Это новая технология, у которой нет аналогов.</p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
   </div>
 </div>
 
@@ -243,7 +243,7 @@ Template Name: main page
           зависимостей к чему-либо</span>
       </li>
     </ul>
-    <a data-fancybox data-src="#hidden-content" href="javascript:;"><button class="advantages__btn btn-modal">Получить онлайн консультацию</button></a>
+    <a data-fancybox data-src="#hidden-content" href="javascript:;"><button class="advantages__btn btn-modal btn-animated">Получить онлайн консультацию</button></a>
     <div style="display: none;" id="hidden-content">
       <?php echo do_shortcode('[contact-form-7 id="284" title="Контактная форма"]') ?>
     </div>
@@ -298,14 +298,14 @@ Template Name: main page
         // loop through the rows of data
         while (have_rows('voprosy')) : the_row(); ?>
 
-        
+
           <div class="item close1">
             <div class="item__name">
               <span><?php echo the_sub_field('zagolovok') ?></span>
               <div class="img">
                 <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <line x1="0.606445" y1="14.5825" x2="30.6064" y2="14.5825" stroke="#A0FEB5"/>
-                  <line x1="16.3198" y1="30.1538" x2="16.3198" y2="0.153809" stroke="#A0FEB5"/>
+                  <line x1="0.606445" y1="14.5825" x2="30.6064" y2="14.5825" stroke="#A0FEB5" />
+                  <line x1="16.3198" y1="30.1538" x2="16.3198" y2="0.153809" stroke="#A0FEB5" />
                 </svg>
 
               </div>
@@ -317,7 +317,7 @@ Template Name: main page
           </div>
 
 
-       
+
 
       <?php endwhile;
       else :

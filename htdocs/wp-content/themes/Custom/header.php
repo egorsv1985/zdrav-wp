@@ -3,9 +3,9 @@ $items_count = count(WC()->cart->get_cart());
 ?>
 
 
-<?php 
-  wp_enqueue_style( 'fancybox', get_template_directory_uri() . '/fancybox/jquery.fancybox.css' );
-  wp_enqueue_script('fancybox-js', get_template_directory_uri() . '/fancybox/jquery.fancybox.js', array('jquery'), null, true);
+<?php
+wp_enqueue_style('fancybox', get_template_directory_uri() . '/fancybox/jquery.fancybox.css');
+wp_enqueue_script('fancybox-js', get_template_directory_uri() . '/fancybox/jquery.fancybox.js', array('jquery'), null, true);
 ?>
 
 
@@ -24,7 +24,7 @@ $items_count = count(WC()->cart->get_cart());
   <?php wp_head(); ?>
 </head>
 
-<body <?php body_class( $class ) ?>>
+<body <?php body_class($class) ?>>
   <header class="header">
     <div class="container header__wrapper">
       <div class="header__logo"><?php echo get_custom_logo(); ?>
@@ -51,15 +51,6 @@ $items_count = count(WC()->cart->get_cart());
         <div class="header__burger"><span class="header__stick"></span></div>
         <nav class="burger__nav">
 
-
-
-
-          <!--  <ul class="burger__menu">
-            <li><a href="#" class="burger__item">Все устройства</a></li>
-            <li><a href="#" class="burger__item">Доставка и оплата</a></li>
-            <li><a href="#" class="burger__item">Контакты</a></li>
-            <li><a href="#" class="burger__item">Интересное</a></li>
-          </ul> -->
         </nav>
       </div>
   </header>
@@ -86,13 +77,13 @@ $items_count = count(WC()->cart->get_cart());
 
 
       <div class="bottom-links">
-        <a href="">
+        <a href="https://www.instagram.com/s.adapter.by/">
           <img src="<?php bloginfo('template_url'); ?>/assets/img/instagram.svg" alt="">
         </a>
-        <a href="">
+        <a href="https://t.me/RENaCoMSQ">
           <img src="<?php bloginfo('template_url'); ?>/assets/img/telegram.svg" alt="">
         </a>
-        <a href="">
+        <a href="https://wa.me/79033385876">
           <img src="<?php bloginfo('template_url'); ?>/assets/img/whatsapp.svg" alt="">
         </a>
       </div>

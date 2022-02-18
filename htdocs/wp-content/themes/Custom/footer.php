@@ -20,21 +20,23 @@
       <a href="#author" class="menu-item">Об авторе</a>
       <a href="#feedback" class="menu-item">Отзывы</a>
     </div> -->
+
+
       <div class="footer__social">
         <h4>Контакты</h4>
         <ul class="footer__contacts contacts">
           <li class="contacts__item">
-            <a class="contacts__links" href="#">
+            <a class="contacts__links" href="https://www.instagram.com/s.adapter.by/">
               <img class="contacts__img" src="<?php echo get_template_directory_uri(); ?>/assets/img/instagram.svg" alt="">
             </a>
           </li>
           <li class="contacts__item">
-            <a class="contacts__links" href="#">
+            <a class="contacts__links" href="https://t.me/RENaCoMSQ">
               <img class="contacts__img" src="<?php echo get_template_directory_uri(); ?>/assets/img/telegram.svg" alt="">
             </a>
           </li>
           <li class="contacts__item">
-            <a class="contacts__links" href="#">
+            <a class="contacts__links" href="https://wa.me/79033385876">
               <img class="contacts__img" src="<?php echo get_template_directory_uri(); ?>/assets/img/whatsapp.svg" alt="">
             </a>
           </li>
