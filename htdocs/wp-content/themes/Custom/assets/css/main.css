@@ -3321,6 +3321,11 @@ body.woocommerce-checkout .apply-coupon-wrapper button {
   display: flex;
 }
 
+.slick-next,
+.slick-arrow {
+  display: none !important;
+}
+
 #related-products-wrapper .how-it-work__item .img-block {
   width: 200px;
   height: 319px;
