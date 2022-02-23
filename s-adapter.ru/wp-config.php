@@ -20,15 +20,16 @@
 
 // ** Параметры MySQL: Эту информацию можно получить у вашего хостинг-провайдера ** //
 
-
 /** Имя базы данных для WordPress */
-define( 'DB_NAME', 'srv92766_5');
+
+define( 'DB_NAME', 'srv92766_ht1');
 
 /** Имя пользователя MySQL */
-define( 'DB_USER', 'srv92766_ht0');
+define( 'DB_USER', 'srv92766_ht1');
+
 
 /** Пароль к базе данных MySQL */
-define( 'DB_PASSWORD', 'Z8wN33GW');
+define( 'DB_PASSWORD', 'FTIr0wNP');
 
 /** Имя сервера MySQL */
 define( 'DB_HOST', 'localhost');
@@ -50,14 +51,14 @@ define( 'DB_COLLATE', '' );
  *
  * @since 2.6.0
  */
-define( 'AUTH_KEY', '157d6cf03293976ffc9ae0087e01d4b8');
-define( 'SECURE_AUTH_KEY', '6427fe0d12ae80ec2cae7a2709d3fa23');
-define( 'LOGGED_IN_KEY', '4e99f5e3b572c8c8c1a11345ef076c00');
-define( 'NONCE_KEY', '9e8591be9889b2ef0116a8d40ab2b93d');
-define( 'AUTH_SALT', 'fcdaf5ab6bc189c7eff26c25f44a952b');
-define( 'SECURE_AUTH_SALT', '8ae6fd33409ae7484ca9dd86a5887981');
-define( 'LOGGED_IN_SALT', '0f44ce28e54cae02637269996bbb995c');
-define( 'NONCE_SALT', '769886b1b6e566b46b438f4dd7d9610c');
+define( 'AUTH_KEY', '90417566ea8320273b60d277aa4ad5b3');
+define( 'SECURE_AUTH_KEY', 'e4189ab84ed22e839c81be86d84f234e');
+define( 'LOGGED_IN_KEY', '7571574e0acfb7a3ea9fb99916d5a84e');
+define( 'NONCE_KEY', '1be06de23c3c39dffb5e345bc86134f0');
+define( 'AUTH_SALT', '17e2fe0f27ac59de735ca079d8cd6097');
+define( 'SECURE_AUTH_SALT', 'edf6378426b926e6ea7c622f1cea0ee0');
+define( 'LOGGED_IN_SALT', '9b148884f9dfead0906b15570056f791');
+define( 'NONCE_SALT', 'c984cdf399cff8d82f7952d045a5faae');
 
 /**#@-*/
 
@@ -67,7 +68,7 @@ define( 'NONCE_SALT', '769886b1b6e566b46b438f4dd7d9610c');
  * Можно установить несколько сайтов в одну базу данных, если использовать
  * разные префиксы. Пожалуйста, указывайте только цифры, буквы и знак подчеркивания.
  */
-$table_prefix = 'wp_';
+$table_prefix = 'wp_11';
 
 /**
  * Для разработчиков: Режим отладки WordPress.
