@@ -190,12 +190,8 @@ $image_url = wp_get_attachment_image_url($product_image_id, 'full');
         ?>
 
         <p class="effect__afterlist"><?php the_field('tekst_pod_spiskom'); ?></p>
-        <a class="btn-modal" data-fancybox data-src="#hidden-content" href="javascript:;">
-          Получить онлайн консультацию
-        </a>
-        <div style="display: none;" id="hidden-content">
-          <?php echo do_shortcode('[contact-form-7 id="284" title="Контактная форма"]') ?>
-        </div>
+
+        <button class="effect__btn">Получить онлайн консультацию</button>
       </div>
 
       <div class="w355"></div>

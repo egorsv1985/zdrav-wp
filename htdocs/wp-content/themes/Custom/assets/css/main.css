@@ -4392,10 +4392,10 @@ body.woocommerce-cart #cart-page-wrapper .row {
     margin: 0 auto;
   }
 
-  .header__menu,
+  /* .header__menu,
   .header .burger__nav {
     display: none;
-  }
+  } */
 
   .logo-text {
     font-size: 14px;

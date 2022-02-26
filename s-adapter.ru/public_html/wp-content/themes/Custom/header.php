@@ -18,7 +18,6 @@ wp_enqueue_script('fancybox-js', get_template_directory_uri() . '/fancybox/jquer
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title><?php echo wp_get_document_title() ?></title>
 
 
@@ -32,7 +31,7 @@ wp_enqueue_script('fancybox-js', get_template_directory_uri() . '/fancybox/jquer
         <span class="logo-text">СИМВОЛО-АДАПТЕРЫ: серия ЗДРАВ</span>
       </div>
 
-      <div class="header__menu">
+      <ul class="header__menu">
         <?php
         wp_nav_menu(
           array(
@@ -43,7 +42,7 @@ wp_enqueue_script('fancybox-js', get_template_directory_uri() . '/fancybox/jquer
         );
         ?>
 
-      </div>
+      </ul>
       <div class="right-toolbar">
         <div class="header__cart">
           <div class="counter"><?php echo $items_count ?></div>
@@ -52,18 +51,8 @@ wp_enqueue_script('fancybox-js', get_template_directory_uri() . '/fancybox/jquer
         <div class="header__burger"><span class="header__stick"></span></div>
         <nav class="burger__nav">
 
-
-
-
-          <!--  <ul class="burger__menu">
-            <li><a href="#" class="burger__item">Все устройства</a></li>
-            <li><a href="#" class="burger__item">Доставка и оплата</a></li>
-            <li><a href="#" class="burger__item">Контакты</a></li>
-            <li><a href="#" class="burger__item">Интересное</a></li>
-          </ul> -->
         </nav>
       </div>
-    </div>
   </header>
 
 

@@ -12,6 +12,7 @@ Template Name: main page
 } ?>
 
 <div class="wrapper">
+
   <section class="hero">
     <div class="container">
       <div class="hands">
@@ -39,6 +40,11 @@ Template Name: main page
             <a class="btn-modal" data-fancybox data-src="#hidden-content" href="javascript:;">
               Получить онлайн консультацию
             </a>
+
+
+
+
+
             <!-- <a href="#callback"><button class="btn-modal">Получить онлайн консультацию</button></a> -->
             <a class="hero__btn-link" href="#how-it-work">
               <span class="hero__more">Все устройства</span>
@@ -86,7 +92,7 @@ Template Name: main page
         </div>
         <div class="about__wrapper">
           <div class="about__image-upper">
-            <img src="https://s-adapter.ru/wp-content/uploads/2022/02/img_20211227_123537-1-1.png" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/home_page/about_img.png" alt="">
           </div>
           <p class="about__description">Изделие сделано по уникальной технологии из экологичных материалов. Является
             сильным помощником для естественного укрепления иммунитета человека. В основе наших разработок лежит
@@ -217,19 +223,19 @@ Template Name: main page
   <div class="container">
     <h2 class="advantages__title">Преимущества устройств серии ЗДРАВ</h2>
     <ul class="advantages__list">
-      <li class="advantages__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/Ring1.svg" alt=""><span class="advantages__text">Работает
+      <li class="advantages__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/Ring 1.svg" alt=""><span class="advantages__text">Работает
 
           пожизненно</span></li>
-      <li class="advantages__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/Ring2.svg" alt=""><span class="advantages__text">Не привязан ни
+      <li class="advantages__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/Ring 2.svg" alt=""><span class="advantages__text">Не привязан ни
           к
           какому источнику
           питания</span>
       </li>
-      <li class="advantages__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/Ring3.svg" alt=""><span class="advantages__text">Не привязан ни
+      <li class="advantages__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/Ring 3.svg" alt=""><span class="advantages__text">Не привязан ни
           к
           одной эзотерической
           структуре</span></li>
-      <li class="advantages__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/Ring4.svg" alt=""><span class="advantages__text">Не рождает
+      <li class="advantages__item"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/Ring 4.svg" alt=""><span class="advantages__text">Не рождает
           зависимостей к чему-либо</span>
       </li>
     </ul>
@@ -325,8 +331,8 @@ Template Name: main page
     <div class="author__info">
       <div class="author__image">
         <picture>
-
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/author.jpg" alt="Author" />
+          <source srcset="<?php echo get_template_directory_uri(); ?>/assets/img/author.webp" type="image/webp" alt="Author">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/author.png" alt="Author" />
         </picture>
       </div>
       <div class="author__text">
