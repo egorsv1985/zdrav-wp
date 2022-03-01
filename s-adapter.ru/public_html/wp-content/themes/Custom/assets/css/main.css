@@ -4140,31 +4140,13 @@ body.woocommerce-cart #cart-page-wrapper .row {
 		z-index: 55;
 	}
 
-	.hero {
-		/* margin-top: 10px;
-      margin-left: 315px; */
-	}
 
 	.hero__grid {
 		-ms-grid-columns: 325px 1fr;
 		grid-template-columns: 325px 1fr;
 	}
 
-	/* 
-  .hero:after {
-    content: '';
-    display: block;
-    width: 439px;
-    height: 564px;
-    background: url(../img/decor1.png) center center no-repeat;
-    background-size: contain;
-    position: absolute;
-    z-index: 49;
-    top: auto;
-    bottom: 0;
-    right: 0;
-    max-width: 100%;
-  } */
+
 
 	.nowebp .nowebp .hero:after {
 		background: url(../img/decor1.png) center center no-repeat;
