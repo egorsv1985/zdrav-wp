@@ -133,10 +133,6 @@ $image_url = wp_get_attachment_image_url($product_image_id, 'full');
       <div class="about__upper-text">
 
         <?php the_field('blok_-_opisanie_tovara') ?>
-
-        <!-- <p class="about__text">Этот простой с виду кружочек диаметром 5.5 см, находится рядом с ёмкостями воды/крепкого алкоголя (радиус 50-100 см) и изменяет её структуру, а именно качественно изменяет молекулярные связи между молекулами воды. Эффективнее, когда рядом или в ёмкосте с водой находится кристалл кварца.</p>
-        <p class="about__text">
-          Даже не очень качественная вода, пройдя 30-минутную обработку (на крепкий алкоголь через 3-5 минут) устройством «Вода-жизнь», уже не нанесёт тот вред, который могла бы доставить нашему организму.</p> -->
         <div class="about__lower">
           <p class="about__lower-text"><?php the_field('tekst_sleva') ?></p>
         </div>
@@ -190,8 +186,13 @@ $image_url = wp_get_attachment_image_url($product_image_id, 'full');
         ?>
 
         <p class="effect__afterlist"><?php the_field('tekst_pod_spiskom'); ?></p>
+        <a class="btn-modal" data-fancybox data-src="#hidden-content" href="javascript:;">
+          Получить онлайн консультацию
+        </a>
+        <div style="display: none;" id="hidden-content">
+          <?php echo do_shortcode('[contact-form-7 id="284" title="Контактная форма"]') ?>
+        </div>
 
-        <button class="effect__btn">Получить онлайн консультацию</button>
       </div>
 
       <div class="w355"></div>

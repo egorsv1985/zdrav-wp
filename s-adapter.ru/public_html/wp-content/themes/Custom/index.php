@@ -32,7 +32,7 @@ Template Name: main page
           <h2 class="hero__subtitle">Применение устройства ЗДРАВ:</h2>
           <ul class="hero__list">
             <li class="hero__item">Продлевают ресурс организма человека на треть и более.</li>
-            <li class="hero__item">Защитищают от ГРИППа и COVIDа без противогаза и маски.</li>
+            <li class="hero__item">Помогает предохраниться от ГРИППА И COVID без «средств индивидуальной защиты».</li>
             <li class="hero__item">Противопоказаний нет.</li>
             <li class="hero__item">Подходит всем.</li>
           </ul>
@@ -40,11 +40,9 @@ Template Name: main page
             <a class="btn-modal" data-fancybox data-src="#hidden-content" href="javascript:;">
               Получить онлайн консультацию
             </a>
-
-
-
-
-
+            <div style="display: none;" id="hidden-content">
+              <?php echo do_shortcode('[contact-form-7 id="284" title="Контактная форма"]') ?>
+            </div>
             <!-- <a href="#callback"><button class="btn-modal">Получить онлайн консультацию</button></a> -->
             <a class="hero__btn-link" href="#how-it-work">
               <span class="hero__more">Все устройства</span>
@@ -57,9 +55,7 @@ Template Name: main page
   </section>
 
 
-  <div style="display: none;" id="hidden-content">
-    <?php echo do_shortcode('[contact-form-7 id="284" title="Контактная форма"]') ?>
-  </div>
+
 
   <ul class="side__contacts contacts">
     <li class="contacts__item">
@@ -87,8 +83,8 @@ Template Name: main page
       <div class="about__wrap">
         <div class="about__upper-text">
           <h2 class="about__title">Что такое устройство ЗДРАВ:</h2>
-          <p class="about__subtitle">Внешне простое изделие, влияющие на структуру материи, подстраивающее её, под
-            нужды любого человека самым оптимальным, для него образом.</p>
+          <p class="about__subtitle">Внешне простое изделие, влияющие на структуру материи, подстраивающее её под
+            нужды любого человека самым оптимальным для него образом.</p>
         </div>
         <div class="about__wrapper">
           <div class="about__image-upper">
@@ -131,7 +127,7 @@ Template Name: main page
             ),
           ),
           'posts_per_page' => 6,
-          'orderby' => 'rand'
+
         );
         $loop = new WP_Query($args);
         if ($loop->have_posts()) {
@@ -167,6 +163,7 @@ Template Name: main page
           <span class="item-price"><?php the_field('item-price'); ?> руб.</span>
           <div class="item-btn-group">
             <button class="buy">Купить сейчас</button>
+            <button type="submit" name="add-to-cart" value="<?php echo esc_attr($product->get_id()); ?>" class="single_add_to_cart_button button alt fa fa-shopping-cart"><?php echo esc_html($product->single_add_to_cart_text()); ?></button>
             <a class="hero__btn-link" href="<?php the_field('link'); ?>">
               <span class="hero__more">Подробнее</span>
               <div class="hero__more-arrow"></div>

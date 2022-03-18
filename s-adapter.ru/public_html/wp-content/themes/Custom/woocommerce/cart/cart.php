@@ -46,7 +46,7 @@ defined('ABSPATH') || exit;
 	</div>
 	<div class="row">
 		<div class="col-lg-8">
-			
+
 			<div class="shopping-cart-list-area">
 
 				<form class="woocommerce-cart-form" action="<?php echo esc_url(wc_get_cart_url()); ?>" method="post">
@@ -92,80 +92,80 @@ defined('ABSPATH') || exit;
 
 
 
-													<?php if ( wp_is_mobile() ) : ?>
-												    <div class="text-right-block">
+													<?php if (wp_is_mobile()) : ?>
+														<div class="text-right-block">
 															<?php
-																if (!$product_permalink) {
-																	echo wp_kses_post(apply_filters('woocommerce_cart_item_name', $_product->get_name(), $cart_item, $cart_item_key) . '&nbsp;');
-																} else {
-																	echo wp_kses_post(apply_filters('woocommerce_cart_item_name', sprintf('<a href="%s" class="product-name">%s</a>', esc_url($product_permalink), $_product->get_name()), $cart_item, $cart_item_key));
-																}
-																?>
-
-
-																<div class="d-flex">
-																	<div class="price"><?php echo WC()->cart->get_product_price($_product) ?></div>
-
-																	<div class="product-quantity">
-																		<?php
-																		if ($_product->is_sold_individually()) {
-																			$product_quantity = sprintf('1 <input type="hidden" name="cart[%s][qty]" value="1" />', $cart_item_key);
-																		} else {
-																			$product_quantity = woocommerce_quantity_input(
-																				array(
-																					'input_name'   => "cart[{$cart_item_key}][qty]",
-																					'input_value'  => $cart_item['quantity'],
-																					'max_value'    => $_product->get_max_purchase_quantity(),
-																					'min_value'    => '0',
-																					'product_name' => $_product->get_name(),
-																				),
-																				$_product,
-																				false
-																			);
-																		}
-																		echo 	$product_quantity;
-																		?>
-																	</div>
-																		
-																</div>
-
-																<div class="remove-icon product-remove">
-																	<?php
-																	echo sprintf(
-																		'<a href="%s" class="remove" aria-label="%s" data-product_id="%s" data-product_sku="%s">X</a>',
-																		esc_url(wc_get_cart_remove_url($cart_item_key)),
-																		esc_html__('Remove this item', 'woocommerce'),
-																		esc_attr($product_id),
-																		esc_attr($_product->get_sku())
-																	);
-																	?>
-																</div>
-
-																
-														</div>
-													<?php else : ?>
-												    <?php
 															if (!$product_permalink) {
 																echo wp_kses_post(apply_filters('woocommerce_cart_item_name', $_product->get_name(), $cart_item, $cart_item_key) . '&nbsp;');
 															} else {
 																echo wp_kses_post(apply_filters('woocommerce_cart_item_name', sprintf('<a href="%s" class="product-name">%s</a>', esc_url($product_permalink), $_product->get_name()), $cart_item, $cart_item_key));
 															}
+															?>
+
+
+															<div class="d-flex">
+																<div class="price"><?php echo WC()->cart->get_product_price($_product) ?></div>
+
+																<div class="product-quantity">
+																	<?php
+																	if ($_product->is_sold_individually()) {
+																		$product_quantity = sprintf('1 <input type="hidden" name="cart[%s][qty]" value="1" />', $cart_item_key);
+																	} else {
+																		$product_quantity = woocommerce_quantity_input(
+																			array(
+																				'input_name'   => "cart[{$cart_item_key}][qty]",
+																				'input_value'  => $cart_item['quantity'],
+																				'max_value'    => $_product->get_max_purchase_quantity(),
+																				'min_value'    => '0',
+																				'product_name' => $_product->get_name(),
+																			),
+																			$_product,
+																			false
+																		);
+																	}
+																	echo 	$product_quantity;
+																	?>
+																</div>
+
+															</div>
+
+															<div class="remove-icon product-remove">
+																<?php
+																echo sprintf(
+																	'<a href="%s" class="remove" aria-label="%s" data-product_id="%s" data-product_sku="%s">X</a>',
+																	esc_url(wc_get_cart_remove_url($cart_item_key)),
+																	esc_html__('Remove this item', 'woocommerce'),
+																	esc_attr($product_id),
+																	esc_attr($_product->get_sku())
+																);
+																?>
+															</div>
+
+
+														</div>
+													<?php else : ?>
+														<?php
+														if (!$product_permalink) {
+															echo wp_kses_post(apply_filters('woocommerce_cart_item_name', $_product->get_name(), $cart_item, $cart_item_key) . '&nbsp;');
+														} else {
+															echo wp_kses_post(apply_filters('woocommerce_cart_item_name', sprintf('<a href="%s" class="product-name">%s</a>', esc_url($product_permalink), $_product->get_name()), $cart_item, $cart_item_key));
+														}
 														?>
 													<?php endif; ?>
 
 
 
-													
 
-													
 
-													
+
+
+
 												</div>
 											</td>
 
 
 
-											<?php if ( wp_is_mobile() ) : ?>
+											<?php if (wp_is_mobile()) : ?>
 
 											<?php else : ?>
 												<td>
@@ -213,8 +213,8 @@ defined('ABSPATH') || exit;
 													</div>
 												</td>
 											<?php endif; ?>
-											
-											
+
+
 										</tr>
 
 								<?php }
@@ -269,3 +269,33 @@ defined('ABSPATH') || exit;
 <!--== End Cart Page Wrapper ==-->
 
 <?php do_action('woocommerce_after_cart'); ?>
+<h3 class="widget__title">Стоимость доставки можно рассчитать, указав адрес доставки на карте. Доставка оплачивается отдельно при получении покупателем.</h3>
+<div>
+	<script type="text/javascript">
+		var ourWidjet = new ISDEKWidjet({
+			defaultCity: 'auto', //какой город отображается по умолчанию
+			cityFrom: 'Минск', // из какого города будет идти доставка
+			country: 'all', // можно выбрать страну, для которой отображать список ПВЗ
+			region: true,
+			detailAddress: true,
+			goods: [{
+				length: 17,
+				width: 12,
+				height: 9,
+				weight: 1
+			}],
+			onCalculate: function(wat) {
+				alert('Доставка в город ' + wat.cityName +
+					"\nкурьером: " + wat.profiles.courier.price + ' (тариф ' + wat.profiles.courier.tarif +
+					")\nдо ПВЗ: " + wat.profiles.pickup.price + ' (тариф ' + wat.profiles.pickup.tarif + ')'
+				);
+				console.log('Расчет доставки ', wat);
+			},
+			link: 'forpvz', // id элемента страницы, в который будет вписан виджет
+			path: 'https://widget.cdek.ru/widget/scripts/', //директория с библиотеками
+			servicepath: 'https://s-adapter.ru/service.php' //ссылка на файл service.php на вашем сайте
+		});
+	</script>
+
+	<div id="forpvz" style="width:100%; height:600px;"></div>
+</div>

@@ -1,11 +1,16 @@
 <?php
+add_action('wp_head', 'sdek_script');
+function sdek_script()
+{
+?>
+    <script id="ISDEKscript" type="text/javascript" src="https://widget.cdek.ru/widget/widjet.js" charset="utf-8"></script>
+<?php
+}
 add_action('wp_enqueue_scripts', 'style_theme');
 add_action('wp_footer', 'scripts_theme');
 add_action('after_setup_theme', 'new_menu');
 add_action('after_setup_theme', 'add_logo');
 add_action('wp_enqueue_scripts', 'contact_styles');
-add_action('wp_head', 'sdek_script');
-
 
 
 // function contact_styles()
@@ -47,14 +52,9 @@ function scripts_theme()
     // wp_enqueue_script('JQuery', '//code.jquery.com/jquery-1.11.0.min.js');
     wp_enqueue_script('Migrate', '//code.jquery.com/jquery-migrate-1.2.1.min.js');
     wp_enqueue_script('slick', '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js');
+
     wp_enqueue_script('main-new', get_template_directory_uri() . '/assets/js/main-new.js');
     wp_enqueue_script('main', get_template_directory_uri() . '/assets/js/main.js');
-}
-function sdek_script()
-{
-?>
-    <script type="text/javascript" id="ISDEKscript" src="https://widget.cdek.ru/widget/widjet.js" charset="utf-8"></script>
-<?php
 }
 
 
@@ -157,7 +157,7 @@ function jk_change_breadcrumb_delimiter($defaults)
 }
 function my_theme_cart_button_text()
 {
-    return 'Купить сейчас';
+    return 'В корзину';
 }
 add_filter('woocommerce_product_single_add_to_cart_text', 'my_theme_cart_button_text');
 

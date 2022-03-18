@@ -6,6 +6,8 @@ $items_count = count(WC()->cart->get_cart());
 <?php
 wp_enqueue_style('fancybox', get_template_directory_uri() . '/fancybox/jquery.fancybox.css');
 wp_enqueue_script('fancybox-js', get_template_directory_uri() . '/fancybox/jquery.fancybox.js', array('jquery'), null, true);
+
+
 ?>
 
 
